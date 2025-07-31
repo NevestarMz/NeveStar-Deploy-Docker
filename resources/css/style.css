@@ -1,0 +1,267 @@
+@import 'tailwindcss';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+/* @tailwind base;
+@tailwind components;       
+@tailwind utilities; */
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+@layer components {
+    /* Custom styles for service icons - Placeholder SVGs */
+    *{
+        font-family: 'Lato', sans-serif;
+    }
+    .service-icon {
+        display: inline-block;
+        width: 64px;
+        height: 64px;
+        margin-bottom: 1.5rem;
+        color: #2563EB; /* Blue-600 equivalent for icons */
+        font-family: 'Lato', sans-serif;
+    }
+    .service-icon.mobile::before {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M7 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7zm0 2h10v16H7V4zm2 13h6v2H9v-2z'/%3E%3C/svg%3E");
+    }
+    .service-icon.web::before {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM4 6h16v12H4V6zm2 10a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm3 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm10-5h-2.5a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5H19a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5z'/%3E%3C/svg%3E");
+    }
+    .service-icon.desktop::before {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M20 3H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7l-1.4 2.8c-.1.2-.1.4 0 .6s.3.4.6.4h6c.3 0 .5-.2.6-.4s.1-.4 0-.6L13 19h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM4 5h16v12H4V5z'/%3E%3C/svg%3E");
+    }
+    .service-icon.management::before {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15H9V9h2v8zm-1.5-10c.83 0 1.5-.67 1.5-1.5S11.33 4 10.5 4 9 4.67 9 5.5s.67 1.5 1.5 1.5zM15 17h-2V9h2v8zm-1.5-10c.83 0 1.5-.67 1.5-1.5S14.33 4 13.5 4 12 4.67 12 5.5s.67 1.5 1.5 1.5z'/%3E%3C/svg%3E");
+    }
+
+    /* Social icons - Placeholder for Font Awesome or custom SVGs */
+    .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 15%;
+        transition: background-color 0.3s;
+    }
+    .social-icon:hover {
+        background-color: #2D3748; /* Gray-800 */
+    }
+
+    /* Lista de benefícios/features com custom checkmark */
+    .list-check li {
+        position: relative;
+        padding-left: 2rem; /* Mais espaço para o ícone */
+        margin-bottom: 1rem; /* Mais espaço entre os itens */
+        line-height: 1.6; /* Melhor legibilidade */
+    }
+    .list-check li::before {
+        content: "\f00c"; /* Font Awesome checkmark icon */
+        font-family: 'Font Awesome 6 Free'; /* Define a família da fonte */
+        font-weight: 900; /* Necessário para ícones solidos */
+        color: #10B981; /* Green-500 */
+        position: absolute;
+        left: 0;
+        top: 0.125rem;
+        font-size: 1.25rem;
+    }
+
+        /* Ícone específico para a secção Hero ERP de Software */
+    .erp-hero-icon {
+        width: 100px;
+        height: 100px;
+        color: white; /* Cor do ícone */
+        margin-bottom: 2.5rem;
+    }
+
+    /* Ícone específico para a secção Hero ERP */
+    .web-hero-icon {
+        width: 100px;
+        height: 100px;
+        color: white; /* Cor do ícone */
+        margin-bottom: 2.5rem;
+    }
+
+    /* Ícone específico para a secção Hero ERP */
+    .mobile-hero-icon {
+        width: 100px;
+        height: 100px;
+        color: white; /* Cor do ícone */
+        margin-bottom: 2.5rem;
+    }    
+
+    /* Estilo para os cards de projetos */
+    .project-card {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .project-card:hover {
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+    }
+    .project-card img {
+        border-radius: 0.75rem; /* Cantos arredondados para imagens */
+        width: 100%;
+        height: 350px; /* Altura fixa para consistência */
+        object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+        margin-bottom: 1.5rem;
+    }
+     
+    
+    /* Specific style for plan list items (checkmark) */
+    .plan-list li {
+        position: relative;
+        padding-left: 1.75rem;
+        margin-bottom: 0.5rem;
+    }
+    .plan-list li::before {
+        content: "\f00c"; /* Font Awesome checkmark */
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        color: #10B981; /* Green color for checkmark */
+        position: absolute;
+        left: 0;
+        top: 0.25rem;
+        font-size: 1rem;
+    }
+
+    /* Card Styling - Usado nas secções de serviços e planos */
+    .card {
+        background-color: white;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .card:hover {
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+    }
+
+     /* Card Shadow & Hover Effect (for service cards, plan cards, about cards) */
+    .card-hover-effect {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        border-radius: 0.75rem; /* Consistent border-radius */
+    }
+    .card-hover-effect:hover {
+        transform: translateY(-8px); /* More pronounced lift */
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    }
+
+     /* Estilo para ícones de bullet points personalizados (nova implementação) */
+    .custom-bullet-list li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+    .custom-bullet-list li .icon {
+        font-size: 1.5rem;
+        color: rgba(37,99,235,1);
+        margin-right: 1rem;
+        flex-shrink: 0;
+        margin-top: 0.25rem; /* Ajuste fino */
+    }
+    .custom-bullet-list li p {
+        line-height: 1.6;
+    }
+
+    /* Hero Section Background Animation */
+    .hero-background {
+        background-image: linear-gradient(135deg, rgba(37,99,235,1) 0%, var(--tw-nevestar-darkblue) 100%);
+        animation: gradientShift 10s ease infinite alternate;
+        position: relative;
+        overflow: hidden;
+    }
+    /* Optional: Add subtle particles or shapes */
+    .hero-background::before, .hero-background::after {
+        content: '';
+        position: absolute;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: moveCircles 15s linear infinite;
+    }
+    .hero-background::before {
+        width: 150px;
+        height: 150px;
+        top: 10%;
+        left: 5%;
+    }
+    .hero-background::after {
+        width: 100px;
+        height: 100px;
+        bottom: 15%;
+        right: 10%;
+        animation-delay: 3s;
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+    @keyframes moveCircles {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+        25% { transform: translate(50px, -20px) scale(1.1); opacity: 0.6; }
+        50% { transform: translate(100px, 50px) scale(1.2); opacity: 0.7; }
+        75% { transform: translate(50px, 80px) scale(1.1); opacity: 0.6; }
+        100% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+    }
+
+    /* Scroll Animation (Intersection Observer) */
+    .animated-section {
+        opacity: 0;
+        transform: translateY(30px); /* Increased initial Y translation */
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Longer transition */
+    }
+    .animated-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Back to Top Button */
+    #back-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background-color: blue;
+        color: white;
+        border-radius: 50%;
+        padding: 0.75rem;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        z-index: 1000;
+    }
+    #back-to-top.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .price {
+        color: #2f1c6a;
+    }
+
+    /* Adjustments for footer logo (can be larger or same as header) */
+    .footer .nevestar-logo .mouse-icon {
+            width: 40px;
+            height: 40px;
+    }
+    .footer .nevestar-logo .main-text {
+            font-size: 1.5rem; /* Equivalent to text-2xl */
+    }
+    .footer .nevestar-logo .slogan-text {
+            font-size: 0.875rem; /* Equivalent to text-sm */
+    }
+}

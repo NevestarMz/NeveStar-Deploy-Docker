@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+@layer components {
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+    /* Estilos para transições suaves */
+    .page-content {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    .page-content.active {
+        display: block;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .modal {
+        display: none;
+        animation: modalFadeIn 0.3s ease-in-out;
+    }
+    .modal.flex {
+        display: flex;
+    }
+    @keyframes modalFadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .sidebar-link.active {
+        background-color: #374151; /* bg-gray-700 */
+        border-left: 4px solid #3b82f6; /* border-blue-500 */
+    }
+        .sidebar-link.active i, .sidebar-link.active span {
+        color: #ffffff;
+    }
+}
