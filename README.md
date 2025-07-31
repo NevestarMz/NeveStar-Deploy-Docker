@@ -1,92 +1,107 @@
-Código fonte desenvolvido na aulas: [Acessar as aulas](https://www.youtube.com/watch?v=ButD2QVZprE&list=PLmY5AEiqDWwB29FbhTfTh86Zr0yjeFBwO).<br>
-Como criar um CRUD com Laravel 12 e Tailwind, ou seja, cadastrar, listar, editar e apagar.<br>
+## Como usar Docker na VPS da Hostinger para fazer o deploy do Laravel 12
+
+- [Ganhe 20% de desconto adicional na Hostinger](https://hostinger.com?REFERRALCODE=nevestar)
 
 ## Requisitos
 
-* PHP 8.2 ou superior - Conferir a versão: php -v
+* Docker - Conferir a instalação no PowerShell: docker --version
 * Composer - Conferir a instalação: composer --version
+* PHP 8.2 ou superior - Conferir a versão: php -v
 * Node.js 22 ou superior - Conferir a versão: node -v
-* GIT - Conferir a instalação: git -v
+* Git - Conferir a instalação: git --version
 
-## Como rodar o projeto baixado
+## Criar o projeto com Laravel no PC e criar o container no Docker
 
-Baixar os arquivos do GitHub.
-```
-git clone <repositorio_url> .
-```
-```
-git clone https://github.com/celkecursos/tutorial-como-usar-laravel-12.git .
-```
+- Acessar o prompt de comando ou o terminal do editor VSCode.
 
-- Duplicar o arquivo ".env.example" e renomear para ".env".
-
-Alterar no arquivo .env as credenciais do banco de dados.
+Criar o projeto com Laravel sem instalar o mesmo de forma global no sistema operacional.
 ```
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=nome_do_banco_de_dados
-DB_USERNAME=usuario_do_banco_de_dados
-DB_PASSWORD=senha_do_usuario_do_banco_de_dados
+composer create-project laravel/laravel meu-projecto-laravel-docker
 ```
 
-- Para a funcionalidade enviar e-mail funcionar, necessário alterar as credenciais do servidor de envio de e-mail no arquivo .env.
-- Utilizar o servidor fake durante o desenvolvimento: [Acessar envio gratuito de e-mail](https://mailtrap.io?ref=celke)
-- Utilizar o servidor Iagente no ambiente de produção: [Acessar envio gratuito de e-mail](https://login.iagente.com.br/solicitacao-conta-smtp/origin/celke)
-- Configurar DNS da Iagente na [Hostinger](https://www.hostinger.com.br/referral?REFERRALCODE=1CESARNICOL13): [Acessar o tutorial](https://celke.com.br/artigo/como-configurar-o-dns-da-iagente-na-vps-da-hostinger)
+Acessar o diretório do projeto.
 ```
-# MAIL_MAILER=smtp
-# MAIL_SCHEME=null
-# MAIL_HOST=smart.iagentesmtp.com.br
-# MAIL_PORT=587
-# MAIL_USERNAME=nome-do-usuario-na-iagente
-# MAIL_PASSWORD=senha-do-usuario-na-iagente
-# MAIL_FROM_ADDRESS="colocar-email-remetente@meu-dominio.com.br"
-# MAIL_FROM_NAME="${APP_NAME}"
+cd meu-projecto-laravel-docker
 ```
 
-Instalar as dependências do PHP
+Instalar o Sail no projeto existente.
 ```
-composer install
-```
-
-Instalar as dependências do Node.js.
-```
-npm install
+composer require laravel/sail --dev
 ```
 
-Gerar a chave para o arquivo .env.
+- Acessar WSL.
+
+Verificar se o PHP 8.4 está ativo.
 ```
-php artisan key:generate
+php -v
 ```
 
-Executar as migration para criar a base de dados e as tabelas.
+Acessar o diretório que será criado o projeto "c:/caminho-projecto/meu-projecto-laravel-docker". /mnt/c → é onde o WSL monta o disco C: do Windows. /mnt/c/caminho-projecto → equivale a C:\caminho-projecto.
 ```
-php artisan migrate
-```
-
-Iniciar o projeto criado com Laravel.
-```
-php artisan serve
+cd /mnt/c/xampp/htdocs/neveStar
 ```
 
-Executar as bibliotecas Node.js.
+Publicar o docker-compose.yml e alterar no arquivo .env as variáveis ​​de ambiente necessárias para se conectar aos serviços do Docker.
 ```
-npm run dev
-```
-
-Acessar o conteúdo padrão do Laravel
-```
-http://127.0.0.1:8000
+php artisan sail:install
 ```
 
-# Fazer o deploy do projeto criado com Laravel 12 na Hostinger
+Criar os containers com Laravel e MySQL.
+```
+./vendor/bin/sail up -d
+```
 
-- Ganhe 20% de desconto adicional na Hostinger: https://www.hostinger.com.br/referral?REFERRALCODE=1CESARNICOL13
+Rodar migrate para criar a base de dados e as tabelas.
+```
+./vendor/bin/sail artisan migrate
+```
 
-- Cupom para ganhar 10% de desconto adicional na Hostinger: celke
+Rodar as seedeers para cadastrar registro de teste.
+```
+./vendor/bin/sail artisan db:seed
+```
 
-- Configuração básica da VPS da Hostinger: https://celke.com.br/artigo/configuracoes-basicas-de-uma-vps-na-hostinger
+Acessar a aplicação no navegador.
+```
+http://127.0.0.1
+```
+
+## Como enviar o projeto para o GitHub.
+
+Inicializar um novo repositorio GIT.
+```
+git init
+```
+
+Adicionar todos os arquivos modificados na área de preparação.
+```
+git add .
+```
+
+Verificar em qual branch está.
+```
+git branch
+```
+
+Renomear a branch atual no GIT para main.
+```
+git branch -M main
+```
+
+Commit registra as alterações feitas nos arquivos que foram adicionados na área de preparação.
+```
+git commit -m "Deploy do projeto NeveStar"
+```
+
+Adicionar um repositório remoto ao repositório local.
+```
+git remote add origin https://github.com/NevestarMz/NeveStar-Deploy-Docker.git
+```
+
+Enviar os commits locais para um repositório remoto.
+```
+git push -u origin main
+```
 
 ## Conectar o PC ao servidor com SSH
 
@@ -95,10 +110,8 @@ Criar chave SSH (chave pública e privada).
 ssh-keygen -t rsa -b 4096 -C "seu-email@exemplo.com"
 ```
 ```
-ssh-keygen -t rsa -b 4096 -C "rivaldoantonioneves@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "nevestar@nevestar.co.mz"
 ```
-
-- Senha usada na aula, não utilizar a mesma: 58C8s3#7fX5x
 
 Local que é criado a chave pública.
 ```
@@ -115,23 +128,10 @@ cat ~/.ssh/id_rsa.pub
 
 Acessar o servidor com SSH.
 ```
+ssh usuario-do-servidor@ip-do-servidor-vps
+```
+```
 ssh root@93.127.210.72
-```
-
-Se gerar o erro "The authenticity of host 'github.com (xx.xxx.xx.xxx)' can't be established.".<br>
-Isso é uma medida de segurança para evitar ataques de "man-in-the-middle".<br>
-
-Digite yes quando for solicitado.
-```
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-```
-
-Remover os arquivos do servidor.
-```
-rm -rf /home/user/htdocs/endereco-do-servidor/{*,.*}
-```
-```
-rm -rf /home/nevestar/htdocs/www.nevestar.co.mz/{*,.*}
 ```
 
 ## Conectar Servidor ao GitHub
@@ -146,16 +146,14 @@ Imprimir a chave pública gerada.
 cat ~/.ssh/id_rsa.pub
 ```
 
-- No GitHub, acessar Settings (Configurações) do seu repositório ou da sua conta, em seguida, vá para SSH and GPG keys e clique em New SSH key.<br>
-Cole a chave pública no campo fornecido e salve.
+- No GitHub, vá para Settings (Configurações) do seu repositório ou da sua conta, em seguida, vá para SSH and GPG keys e clique em New SSH key. Cole a chave pública no campo fornecido e salve.
 
 Verificar a conexão com o GitHub.
 ```
 ssh -T git@github.com
 ```
 
-- Se gerar o erro "The authenticity of host 'github.com (xx.xxx.xx.xxx)' can't be established.".
-- Isso é uma medida de segurança para evitar ataques de "man-in-the-middle".
+- Se gerar o erro "The authenticity of host 'github.com (xx.xxx.xx.xxx)' can't be established.". Isso é uma medida de segurança para evitar ataques de "man-in-the-middle". Necessário adicionar a chave do host do GitHub ao arquivo de known_hosts do seu servidor.
 
 Digite yes quando for solicitado.
 ```
@@ -167,17 +165,18 @@ Verificar a conexão novamente.
 ssh -T git@github.com
 ```
 
-Mensagem de conexão realizada com sucesso.<br>
-Hi nome-usuario! You've successfully authenticated, but GitHub does not provide shell access.<br>
+- Mensagem de conexão realizada com sucesso. Hi nome-usuario! You've successfully authenticated, but GitHub does not provide shell access.
 
-Usar o terminal conectado ao servidor. Primeiro acessar o diretório do projeto no servidor.
+## Enviar os arquivos do Github para a VPS da Hostinger
+
+Baixar os arquivos do GitHub para a VPS.
 ```
-cd /home/nevestar/htdocs/www.nevestar.co.mz
+git clone <ssh_repository_url>
 ```
 
-Baixar os arquivos do Git.
+Acessar o diretório do projeto.
 ```
-git clone <repository_url> .
+cd tutorial-meu-projeto-laravel-docker
 ```
 
 Duplicar o arquivo ".env.example" e renomear para ".env".
@@ -190,261 +189,110 @@ Abrir o arquivo ".env" e alterar as variaveis de ambiente.
 nano .env
 ```
 
-- Ctrl + O e enter para salvar.
-- Ctrl + X para sair.
+Ctrl + O e enter para salvar.<br>
+Ctrl + X para sair.<br>
 
-Alterar os dados nas variáveis de ambiente no arquivo .env. Para ver os erros durante o deploy, deixar o valor "local" na variável APP_ENV.
+Alterar o valor das variaveis de ambiente.
 ```
-APP_NAME=Celke
+APP_NAME=NeveStar
 APP_ENV=production
 APP_KEY=
 APP_DEBUG=false
-APP_TIMEZONE=America/Sao_Paulo
+APP_TIMEZONE=Africa/Maputo
 APP_URL=https://srv566492.hstgr.cloud 
 ```
 
-- Criar o banco de dados MySQL no servidor.
-
-Alterar as credenciais do banco de dados nas variaveis de ambiente no arquivo .env.
+Alterar as variaveis de conexão com banco de dados.
 ```
 DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
+DB_HOST=mysql
 DB_PORT=3306
-DB_DATABASE=celke
-DB_USERNAME=root
-DB_PASSWORD=
+DB_DATABASE=laravel
+DB_USERNAME=sail
+DB_PASSWORD=password
 ```
 
-Instalar as dependências do PHP.
+- Executar um container temporário e remover automaticamente após o uso (--rm)
+- Montar o diretório atual (pwd) do host como /app dentro do container
+- Definir o diretório de trabalho dentro do container como /app (onde está o projeto)
+- Usar a imagem Docker oficial do Laravel Sail com PHP 8.4 e Composer
+- Executar o comando "composer install" dentro do container para instalar as dependências
 ```
-composer install
-```
-
-Executar as migration para criar as tabelas.
-```
-php artisan migrate
-```
-
-Instalar as dependências do Node.js.
-```
-npm run build
+docker run --rm \
+  -v $(pwd):/app \
+  -w /app \
+  laravelsail/php84-composer:latest \
+  composer install
 ```
 
-Quando gerar o erro "sh: 1: vite: not found", necessário instalar o Vite. Executar e Etapa 1, Etapa 2 e Etapa 3.
+Criar e iniciar os containers definidos no docker-compose.yml.
+Rodar MySQL, PHP-FPM, etc.
+Deixar o ambiente pronto para rodar comandos Artisan dentro do Sail.
 ```
-npm install
-```
-
-Etapa 1 - Verificar se o Vite está instalado.
-```
-npx vite --version
+./vendor/bin/sail up -d
 ```
 
-Etapa 2 - Gerar a build. Compilar o código-fonte do projeto.
+Listar os containers.
 ```
-npm run build
-```
-
-Etapa 3 - Remover o diretório "node_modules".
-
-Reiniciar Nginx.
-```
-sudo systemctl restart nginx
+docker ps
 ```
 
-Limpar cache.
+Acessar o bash do container.
 ```
-php artisan config:clear
+docker exec -it tutorial-meu-projeto-laravel-docker-laravel.test-1 bash
 ```
 
-Gerar a chave para arquivo .env.
+Alterar o proprietário dos arquivos.
+```
+chown -R sail:sail /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/.env
+```
+
+Alterar a permissão.
+```
+chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+```
+
+Gerar a chave do app.
 ```
 php artisan key:generate
 ```
 
-Alterar a propriedade do diretório.
+Sair do bash do container.
 ```
-sudo chown -R nevestar:nevestar /home/nevestar/htdocs/www.nevestar.co.mz
-```
-
-Verificar as vulnerabilidades.
-```
-npm audit
+exit
 ```
 
-Corrigir automaticamente todas as vulnerabilidades.
+Verificar se os containers estão rodando.
 ```
-npm audit fix
-```
-
-Atualizar manualmente a dependência.
-```
-npm install axios@latest
+docker ps
 ```
 
-- Para a funcionalidade enviar e-mail funcionar, necessário alterar as credenciais do servidor de envio de e-mail no arquivo .env.
-- Utilizar o servidor fake durante o desenvolvimento: [Acessar envio gratuito de e-mail](https://mailtrap.io?ref=celke)
-- Utilizar o servidor Iagente no ambiente de produção: [Acessar envio gratuito de e-mail](https://login.iagente.com.br/solicitacao-conta-smtp/origin/celke)
-- Configurar DNS da Iagente na [Hostinger](https://www.hostinger.com.br/referral?REFERRALCODE=1CESARNICOL13): [Acessar o tutorial](https://celke.com.br/artigo/como-configurar-o-dns-da-iagente-na-vps-da-hostinger)
+Se não estiverem rodando, necessário subir novamente com:
 ```
-# MAIL_MAILER=smtp
-# MAIL_SCHEME=null
-# MAIL_HOST=smart.iagentesmtp.com.br
-# MAIL_PORT=587
-# MAIL_USERNAME=nome-do-usuario-na-iagente
-# MAIL_PASSWORD=senha-do-usuario-na-iagente
-# MAIL_FROM_ADDRESS="colocar-email-remetente@meu-dominio.com.br"
-# MAIL_FROM_NAME="${APP_NAME}"
+./vendor/bin/sail up -d
 ```
 
-## Instalar o Node.js no servidor.
-
-Atualizar a lista de pacotes disponíveis.
+Rodar migrate para criar a base de dados e as tabelas.
 ```
-sudo apt update
+./vendor/bin/sail artisan migrate
 ```
 
-Adicionar no repositório o Node.js 22.x.
+Rodar as seedeers para cadastrar registro de teste.
 ```
-curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
-```
-
-Instalar o Node.js. -y automatizar a instalação de pacotes sem solicitar a confirmação manual do usuário.
-```
-sudo apt install -y nodejs
+./vendor/bin/sail artisan db:seed
 ```
 
-Reiniciar Nginx.
+Se já estiver tudo rodando, o Laravel deve estar acessível via o navegador pelo IP público da VPS.
 ```
-sudo systemctl restart nginx
-```
-
-Limpar cache.
-```
-php artisan config:clear
-```
-
-Remover o Node.js.
-```
-sudo apt remove nodejs
-```
-
-## Sequência para criar o projeto
-
-Criar o projeto com Laravel
-```
-composer create-project laravel/laravel .
-```
-
-Iniciar o projeto criado com Laravel.
-```
-php artisan serve
-```
-
-Acessar o conteúdo padrão do Laravel
-```
-http://127.0.0.1:8000
-```
-
-Criar a Controller.
-```
-php artisan make:controller NomeController
+http://SEU_IP
 ```
 ```
-php artisan make:controller UserController
-```
-
-Criar a View.
-```
-php artisan make:view nome
-```
-```
-php artisan make:view users/create
-```
-
-Executar as migration para criar a base de dados e as tabelas.
-```
-php artisan migrate
-```
-
-Instalar as dependências do Node.js.
-```
-npm install
-```
-
-Executar as bibliotecas Node.js.
-```
-npm run dev
-```
-
-Criar um arquivo Request com validações do formulário.
-```
-php artisan make:request NomeDoRequest
-```
-```
-php artisan make:request UserRequest
-```
-
-Traduzir para português [Módulo pt-BR](https://github.com/lucascudo/laravel-pt-BR-localization).
-
-Instalar a biblioteca para apresentar o alerta personalizado.
-```
-npm install sweetalert2
-```
-
-Instalar a biblioteca para gerar PDF.
-```
-composer require barryvdh/laravel-dompdf
-```
-
-Gerar a classe para enviar e-mail.
-```
-php artisan make:mail NomeDaClasse
-```
-```
-php artisan make:mail UserPdfMail
-```
-
-## Como enviar o projeto para o GitHub.
-
-Inicializar um novo repositorio GIT.
-```
-git init
-```
-
-Adicionar todos os arquivos modificados na área de preparação.
-```
-git add .
-```
-
-Commit registra as alterações feitas nos arquivos que foram adicionados na área de preparação.
-```
-git commit -m "Base do projeto"
-```
-
-Verificar em qual branch está.
-```
-git branch
-```
-
-Renomear a branch atual no GIT para main.
-```
-git branch -M main
-```
-
-Adicionar um repositório remoto ao repositório local.
-```
-git remote add origin https://github.com/celkecursos/tutorial-como-usar-laravel-12.git
-```
-
-Enviar os commits locais para um repositório remoto.
-```
-git push -u origin main
+http://30.127.210.52
 ```
 
 ## Autor
 
-Este projeto foi desenvolvido por [Cesar Szpak](https://github.com/cesarszpak) e está hospedado no repositório da organização [Celke](https://github.com/celkecursos).
+Este projeto foi desenvolvido por [NeveStar](https://github.com/NevestarMz/NeveStar-Deploy-Docker) e está hospedado no repositório da organização [NevestarMz](https://github.com/NevestarMz).
 
 ## Licença
 
