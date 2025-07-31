@@ -38,7 +38,7 @@ php -v
 
 Acessar o diretório que será criado o projeto "c:/caminho-projecto/meu-projecto-laravel-docker". /mnt/c → é onde o WSL monta o disco C: do Windows. /mnt/c/caminho-projecto → equivale a C:\caminho-projecto.
 ```
-cd /mnt/c/xampp/htdocs/neveStar
+cd /mnt/c/xampp/htdocs/meu-projecto-laravel-docker
 ```
 
 Publicar o docker-compose.yml e alterar no arquivo .env as variáveis ​​de ambiente necessárias para se conectar aos serviços do Docker.
@@ -110,7 +110,7 @@ Criar chave SSH (chave pública e privada).
 ssh-keygen -t rsa -b 4096 -C "seu-email@exemplo.com"
 ```
 ```
-ssh-keygen -t rsa -b 4096 -C "nevestar@nevestar.co.mz"
+ssh-keygen -t rsa -b 4096 -C "usuario@dominio.co.mz"
 ```
 
 Local que é criado a chave pública.
@@ -118,7 +118,7 @@ Local que é criado a chave pública.
 C:\Users\SeuUsuario\.ssh\
 ```
 ```
-C:\Users\cesar/.ssh/
+C:\Users\usuario/.ssh/
 ```
 
 Exibir o conteúdo da chave pública.
@@ -131,14 +131,14 @@ Acessar o servidor com SSH.
 ssh usuario-do-servidor@ip-do-servidor-vps
 ```
 ```
-ssh root@93.127.210.72
+ssh root@.127.210.72
 ```
 
 ## Conectar Servidor ao GitHub
 
 Gerar a chave SSH no servidor.
 ```
-ssh-keygen -t rsa -b 4096 -C "cesar@celke.com.br"
+ssh-keygen -t rsa -b 4096 -C "seu-email@exemplo.com"
 ```
 
 Imprimir a chave pública gerada.
@@ -199,7 +199,7 @@ APP_ENV=production
 APP_KEY=
 APP_DEBUG=false
 APP_TIMEZONE=Africa/Maputo
-APP_URL=https://srv566492.hstgr.cloud 
+APP_URL=https://srv830632.hstgr.cloud 
 ```
 
 Alterar as variaveis de conexão com banco de dados.
