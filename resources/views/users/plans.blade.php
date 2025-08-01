@@ -71,52 +71,54 @@
                     </div>
                     <a href="{{ route('user.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
                 </div>
+                <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-400">
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-700 mb-4">Sites Premium</h3>
+                        <p class="text-4xl font-extrabold mb-4 text-blue-950">+30.000,00 MZN</p>
+                        <p class="text-gray-600 mb-6">Soluções completas e customizadas para grandes projetos e e-commerce robusto.</p>
+                        <ul class="text-gray-700 text-left mb-6 space-y-2 plan-list">
+                            <li class="flex items-center">Todas as funcionalidades anteriores</li>
+                            <li class="flex items-center">Desenvolvimento de E-commerce</li>
+                            <li class="flex items-center">Integrações com Sistemas Externos (APIs)</li>
+                            <li class="flex items-center">Análise de Dados e Relatórios</li>
+                            <li class="flex items-center">Suporte Prioritário 24/7</li>
+                        </ul>
+                    </div>
+                    <a href="{{ route('user.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
+                </div>
 
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-400">
                     <div>
-                        <h3 class="text-2xl font-bold text-blue-700 mb-4">Sites Premium</h3>
-                        <p class="text-4xl font-extrabold mb-4 text-blue-950">+30.000,00 MZN</p>
-                        <p class="text-gray-600 mb-6">Soluções completas e customizadas para grandes projetos e e-commerce robusto.</p>
+                        <h3 class="text-2xl font-bold text-blue-700 mb-4">Aplicações Mobile</h3>
+                        <p class="text-4xl font-extrabold mb-4 text-blue-950">+15.000,00 MZN</p>
+                        <p class="text-gray-600 mb-6">Soluções personalizadas para iOS e Android, conectando o seu negócio aos seus clientes.</p>
                         <ul class="text-gray-700 text-left mb-6 space-y-2 plan-list">
-                            <li class="flex items-center">Todas as funcionalidades anteriores</li>
-                            <li class="flex items-center">Desenvolvimento de E-commerce</li>
+                            <li class="flex items-center">Design UX/UI Exclusivo</li>
+                            <li class="flex items-center">Desenvolvimento Nativo e Híbrido</li>
                             <li class="flex items-center">Integrações com Sistemas Externos (APIs)</li>
-                            <li class="flex items-center">Análise de Dados e Relatórios</li>
-                            <li class="flex items-center">Suporte Prioritário 24/7</li>
+                            <li class="flex items-center">Notificações Push</li>
+                            <li class="flex items-center">Integração de GPS e Câmera</li>
+                            <li class="flex items-center">Publicação na App Store e Google Play</li>
                         </ul>
                     </div>
                     <a href="{{ route('user.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-400">
                     <div>
-                        <h3 class="text-2xl font-bold text-blue-700 mb-4">Sites Premium</h3>
-                        <p class="text-4xl font-extrabold mb-4 text-blue-950">+30.000,00 MZN</p>
-                        <p class="text-gray-600 mb-6">Soluções completas e customizadas para grandes projetos e e-commerce robusto.</p>
+                        <h3 class="text-2xl font-bold text-blue-700 mb-4">Sistemas ERP</h3>
+                        <p class="text-4xl font-extrabold mb-4 text-blue-950">+40.000,00 MZN</p>
+                        <p class="text-gray-600 mb-6 text-center">Integre e otimize a gestão completa da sua empresa em um único sistema centralizado.</p>
                         <ul class="text-gray-700 text-left mb-6 space-y-2 plan-list">
-                            <li class="flex items-center">Todas as funcionalidades anteriores</li>
-                            <li class="flex items-center">Desenvolvimento de E-commerce</li>
-                            <li class="flex items-center">Integrações com Sistemas Externos (APIs)</li>
-                            <li class="flex items-center">Análise de Dados e Relatórios</li>
-                            <li class="flex items-center">Suporte Prioritário 24/7</li>
+                            <li class="flex items-center">Módulos de Finanças e RH</li>
+                            <li class="flex items-center">Gestão de Inventário e Vendas</li>
+                            <li class="flex items-center">Relatórios Personalizados</li>
+                            <li class="flex items-center">Integração com CRM</li>
+                            <li class="flex items-center">Suporte e Treinamento</li>
                         </ul>
                     </div>
                     <a href="{{ route('user.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-400">
-                    <div>
-                        <h3 class="text-2xl font-bold text-blue-700 mb-4">Sites Premium</h3>
-                        <p class="text-4xl font-extrabold mb-4 text-blue-950">+30.000,00 MZN</p>
-                        <p class="text-gray-600 mb-6">Soluções completas e customizadas para grandes projetos e e-commerce robusto.</p>
-                        <ul class="text-gray-700 text-left mb-6 space-y-2 plan-list">
-                            <li class="flex items-center">Todas as funcionalidades anteriores</li>
-                            <li class="flex items-center">Desenvolvimento de E-commerce</li>
-                            <li class="flex items-center">Integrações com Sistemas Externos (APIs)</li>
-                            <li class="flex items-center">Análise de Dados e Relatórios</li>
-                            <li class="flex items-center">Suporte Prioritário 24/7</li>
-                        </ul>
-                    </div>
-                    <a href="{{ route('user.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
-                </div>
+                
             </div>
         </div>
     </section>
