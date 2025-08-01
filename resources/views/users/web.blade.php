@@ -1,4 +1,4 @@
-<@extends('layouts.layout')
+@extends('layouts.layout')
 
 @section('title')
     <title>Desenvolvimento Web - NeveStar | Soluções Tecnológicas em Moçambique</title>
