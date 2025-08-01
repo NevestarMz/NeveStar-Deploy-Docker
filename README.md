@@ -239,7 +239,7 @@ docker ps
 
 Acessar o bash do container.
 ```
-docker exec -it tutorial-meu-projeto-laravel-docker-laravel.test-1 bash
+docker exec -it nevestar-deploy-docker-laravel.test-1 bash
 ```
 
 Alterar o proprietário dos arquivos.
@@ -287,8 +287,9 @@ Se já estiver tudo rodando, o Laravel deve estar acessível via o navegador pel
 http://SEU_IP
 ```
 ```
-http://30.127.210.52
+http://37.90.30.231
 ```
+docker logs nevestar-deploy-docker-laravel.test-1
 
 ## Autor
 
