@@ -106,7 +106,7 @@ git push -u origin main
 ## Conectar o PC ao servidor com SSH
 
 Criar chave SSH (chave pública e privada).
-```
+``` 
 ssh-keygen -t rsa -b 4096 -C "seu-email@exemplo.com"
 ```
 ```
@@ -290,6 +290,7 @@ http://SEU_IP
 http://37.90.30.231
 ```
 docker logs nevestar-deploy-docker-laravel.test-1
+docker compose exec nevestar-deploy-docker-laravel.test-1 nginx -s reload
 
 ## Autor
 

@@ -11,7 +11,7 @@
     <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center animated-section">
         <div class="container mx-auto px-6 flex flex-col items-center">
             <i class="fas fa-users-gear about-hero-icon text-6xl"></i> {{-- Ícone representativo para 'Sobre Nós' --}}
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8">Sobre a NeveStar: Construindo o Futuro Digital de Moçambique</h1>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8">Sobre a NeveStar - Construindo o Futuro Digital de Moçambique</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Descubra a história, a paixão e o compromisso da nossa equipa em transformar ideias em soluções tecnológicas inovadoras para empresas e indivíduos em Moçambique.
             </p>
@@ -25,10 +25,10 @@
                 <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-12">Nossa História, Nossa Missão</h2>
 
                 <p class="text-xl text-gray-700 mb-8 leading-relaxed">
-                    A **NeveStar** nasceu da paixão por tecnologia e do desejo de impulsionar o crescimento digital em Moçambique. Desde o nosso início, dedicamo-nos a criar soluções inovadoras que não apenas atendem, mas superam as expectativas dos nossos clientes. Acreditamos que a tecnologia é a chave para desbloquear um futuro mais eficiente e conectado para todos.
+                    A NeveStar nasceu da paixão por tecnologia e do desejo de impulsionar o crescimento digital em Moçambique. Desde o nosso início, dedicamo-nos a criar soluções inovadoras que não apenas atendem, mas superam as expectativas dos nossos clientes. Acreditamos que a tecnologia é a chave para desbloquear um futuro mais eficiente e conectado para todos.
                 </p>
                 <p class="text-xl text-gray-700 mb-12 leading-relaxed">
-                    Nossa missão é ser a **parceira tecnológica de eleição** para empresas e indivíduos em Moçambique, oferecendo software, mobile, web e consultoria de alta qualidade que traduzem desafios em oportunidades, promovendo a inovação e o sucesso.
+                    Nossa missão é ser a parceira tecnológica de eleição para empresas e indivíduos em Moçambique, oferecendo software, mobile, web e consultoria de alta qualidade que traduzem desafios em oportunidades, promovendo a inovação e o sucesso.
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
@@ -70,19 +70,19 @@
                     </div>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col items-center card-hover-effect">
-                    <img src="{{ asset('assets/team-member/deise.jpg') }}" alt="Nome do Membro 2" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Deise Bernardo António</h3>
+                    <img src="{{ asset('assets/team-member/design.jpg') }}" alt="Nome do Membro 2" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Carlos Mendes</h3>
                     <p class="text-blue-600 font-medium mb-3">Lead UX/UI Designer</p>
-                    <p class="text-gray-700 text-center">Deise garante que todas as nossas interfaces sejam intuitivas, bonitas e proporcionem a melhor experiência ao utilizador.</p>
+                    <p class="text-gray-700 text-center">Jonas garante que todas as nossas interfaces sejam intuitivas, bonitas e proporcionem a melhor experiência ao utilizador.</p>
                     <div class="flex space-x-4 mt-4">
                         <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-linkedin text-xl"></i></a>
                         <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-behance text-xl"></i></a>
                     </div>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col items-center card-hover-effect">
-                    <img src="{{ asset('assets/team-member/rivaldo.jpg') }}" alt="Nome do Membro 3" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Carlos Mendes</h3>
-                    <p class="text-blue-600 font-medium mb-3">Especialista em Desenvolvimento Mobile</p>
+                    <img src="{{ asset('assets/team-member/dev.jpeg') }}" alt="Nome do Membro 3" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Jonas Bento</h3>
+                    <p class="text-blue-600 font-medium mb-3">Especialista em Desenvolvimento Software Mobile</p>
                     <p class="text-gray-700 text-center">Carlos é o nosso guru em mobile, transformando ideias complexas em aplicações móveis fluidas e de alta performance.</p>
                     <div class="flex space-x-4 mt-4">
                         <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-linkedin text-xl"></i></a>
@@ -90,10 +90,10 @@
                     </div>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col items-center card-hover-effect">
-                    <img src="{{ asset('assets/team-member/rivaldo.jpg') }}" alt="Nome do Membro 3" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Herminio Macamo</h3>
+                    <img src="{{ asset('assets/team-member/especialista.jpg') }}" alt="Nome do Membro 3" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Pedro João</h3>
                     <p class="text-blue-600 font-medium mb-3">Especialista em Desenvolvimento Web</p>
-                    <p class="text-gray-700 text-center">Herminio é o nosso cabeça em desenvolvimento Web, transformando ideias complexas em aplicações Web parudas e de alta performance.</p>
+                    <p class="text-gray-700 text-center">Pedro é o nosso cabeça em desenvolvimento Web, transformando ideias complexas em aplicações Web parudas e de alta performance.</p>
                     <div class="flex space-x-4 mt-4">
                         <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-linkedin text-xl"></i></a>
                         <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-twitter text-xl"></i></a>

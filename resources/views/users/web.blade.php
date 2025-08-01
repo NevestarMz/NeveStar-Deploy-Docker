@@ -10,7 +10,7 @@
     <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center animated-section">
         <div class="container mx-auto px-6 flex flex-col items-center">
             <i class="fas fa-globe web-hero-icon text-6xl"></i>
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8">Desenvolvimento Web: Sua Presença Online de Sucesso em Moçambique</h1>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8">Desenvolvimento Web - Sua Presença Online de Sucesso em Moçambique</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Criamos websites e sistemas web personalizados que não apenas impressionam, mas também impulsionam o seu negócio, garantindo visibilidade e resultados no mercado moçambicano.
             </p>
@@ -91,7 +91,7 @@
 
     <section class="py-20 md:py-32 bg-blue-50 animated-section">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16 text-center">Nosso Processo de Desenvolvimento Web NeveStar: Transparência e Eficiência</h2>
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16 text-center">Nosso Processo de Desenvolvimento Web NeveStar - Transparência e Eficiência</h2>
             <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card p-6 text-center">
                     <i class="fas fa-lightbulb text-blue-600 text-4xl mb-4"></i>
@@ -139,22 +139,22 @@
 
     <section class="bg-gray-100 py-20 md:py-32 text-center animated-section">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16">Portfólio NeveStar: Projetos Web que Geram Impacto</h2>
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16">Portfólio NeveStar - Projetos Web que Geram Impacto</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="project-card">
-                    <img src="{{ asset('assets/img/LogistPrime.png') }}" alt="Portal Agrícola Moçambicano" class="object-cover">
+                    <img src="{{ asset('assets/img/AgroMZ.png') }}" alt="Portal Agrícola Moçambicano" class="object-cover">
                     <h3 class="text-xl font-semibold mb-3 text-gray-900">Portal AgroMZ: Agricultura Digital</h3>
                     <p class="text-gray-700 mb-5">Um portal abrangente para a comunidade agrícola moçambicana, com notícias, cotações de produtos e recursos interativos.</p>
                     <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
                 </div>
                 <div class="project-card">
-                    <img src="{{ asset('assets/img/AgroTech.png') }}" alt="Loja Online de Moda Moçambicana" class="object-cover">
+                    <img src="{{ asset('assets/img/ModaMZ.png') }}" alt="Loja Online de Moda Moçambicana" class="object-cover">
                     <h3 class="text-xl font-semibold mb-3 text-gray-900">ModaMZ: E-commerce de Vestuário</h3>
                     <p class="text-gray-700 mb-5">Plataforma de e-commerce de moda com foco em design responsivo, experiência de compra intuitiva e integração com redes sociais.</p>
                     <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
                 </div>
                 <div class="project-card">
-                    <img src="{{ asset('assets/img/Construa.png') }}" alt="Sistema de Gestão para Clínicas" class="object-cover">
+                    <img src="{{ asset('assets/img/SaudeMZ.png') }}" alt="Sistema de Gestão para Clínicas" class="object-cover">
                     <h3 class="text-xl font-semibold mb-3 text-gray-900">Gestão Clínica Pro: Saúde Eficiente</h3>
                     <p class="text-gray-700 mb-5">Sistema web personalizado para clínicas, otimizando agendamentos, gestão de pacientes e prontuários eletrónicos.</p>
                     <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>

@@ -20,7 +20,7 @@
                 <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-12 text-center">Porquê um ERP Personalizado é a Chave para o Seu Negócio em Moçambique?</h2>
 
                 <p class="text-xl text-gray-700 mb-12 leading-relaxed text-center">
-                    No dinâmico mercado moçambicano, gerir eficientemente todos os aspetos do seu negócio é um diferencial competitivo. Os *Sistemas de Gestão Empresarial (ERP)* da NeveStar são desenhados para integrar e otimizar processos, desde a contabilidade e finanças até a gestão de estoque e recursos humanos, proporcionando uma visão unificada e em tempo real da sua empresa. Elimine silos, aumente a produtividade e tome decisões mais inteligentes.
+                    No dinâmico mercado moçambicano, gerir eficientemente todos os aspetos do seu negócio é um diferencial competitivo. Os Sistemas de Gestão Empresarial (ERP) da NeveStar são desenhados para integrar e otimizar processos, desde a contabilidade e finanças até a gestão de estoque e recursos humanos, proporcionando uma visão unificada e em tempo real da sua empresa. Elimine silos, aumente a produtividade e tome decisões mais inteligentes.
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
@@ -91,7 +91,7 @@
 
     <section class="py-20 md:py-32 bg-blue-50 animated-section">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16 text-center">Nosso Processo de Implementação de ERP: Sucesso Garantido em Moçambique</h2>
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16 text-center">Nosso Processo de Implementação de ERP - Sucesso Garantido em Moçambique</h2>
             <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card p-6 text-center">
                     <i class="fas fa-magnifying-glass icon text-blue-600 text-4xl mb-4"></i>
@@ -134,29 +134,30 @@
 
     <section class="bg-gray-100 py-20 md:py-32 text-center animated-section">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16">Portfólio NeveStar: Casos de Sucesso em ERP</h2>
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16">Portfólio NeveStar - Casos de Sucesso em ERP</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="project-card">
-                    <img src="{{ asset('assets/img/Construa.png') }}" alt="ERP para Construção Moçambique" class="object-cover">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">ERP Construtora Futura</h3>
+                    <img src="{{ asset('assets/img/MozConstrua.png') }}" alt="ERP para Construção Moçambique" class="object-cover w-full h-60 md:h-50 pb-3 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">MozConstrua</h3>
                     <p class="text-gray-700 mb-5">Sistema ERP customizado para gestão de projetos de construção, finanças e controle de materiais.</p>
-                    <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
+                    <button class="details-button text-blue-600 hover:underline font-medium text-lg" data-case="construtora-futura">Ver Detalhes</button>
                 </div>
                 <div class="project-card">
-                    <img src="{{ asset('assets/img/AgroTech.png') }}" alt="ERP para Agroindústria Moçambique" class="object-cover">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">AgroTech ERP</h3>
+                    <img src="{{ asset('assets/img/MozAgroTech.png') }}" alt="ERP para Agroindústria Moçambique" class="object-cover w-full h-60 md:h-50 pb-3 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">MozAgroTech</h3>
                     <p class="text-gray-700 mb-5">Solução ERP que otimizou a gestão da cadeia de suprimentos e produção para uma grande agroindústria.</p>
-                    <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
+                    <button class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</button>
                 </div>
                 <div class="project-card">
-                    <img src="{{ asset('assets/img/LogistPrime.png') }}" alt="ERP para Serviços de Logística" class="object-cover">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Logística Prime ERP</h3>
+                    <img src="{{ asset('assets/img/MozLogistica.png') }}" alt="MozLogística" class="object-cover w-full h-60 md:h-50 pb-3 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">MozLogística</h3>
                     <p class="text-gray-700 mb-5">Sistema integrado para gestão de frotas, transporte, estoque e contabilidade para uma empresa de logística.</p>
                     <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section id="contact-form" class="bg-blue-600 text-white py-20 md:py-28 text-center animated-section">
         <div class="container mx-auto px-6">

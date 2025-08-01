@@ -11,7 +11,7 @@
     <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center animated-section">
         <div class="container mx-auto px-6 flex flex-col items-center">
             <i class="fas fa-desktop desktop-hero-icon text-6xl"></i> {{-- Ícone mudado para desktop --}}
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8">Desenvolvimento Desktop: Poder e Performance ao Seu Alcance</h1>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8">Desenvolvimento Desktop - Poder e Performance ao Seu Alcance</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Crie soluções de software desktop personalizadas e robustas para otimizar operações internas, aumentar a produtividade e garantir segurança em Moçambique.
             </p>
@@ -60,27 +60,27 @@
             <div class="max-w-5xl mx-auto custom-bullet-list text-xl text-gray-700">
                 <li>
                     <i class="fas fa-desktop icon"></i> {{-- Ícone adaptado --}}
-                    <p><strong>Design Robusto de Interface:</strong> Criamos interfaces de utilizador (UI) desktop que são não só visualmente apelativas, mas também *altamente funcionais e intuitivas*, otimizadas para fluxos de trabalho complexos e uso prolongado.</p>
+                    <p><strong>Design Robusto de Interface:</strong> Criamos interfaces de utilizador (UI) desktop que são não só visualmente apelativas, mas também altamente funcionais e intuitivas, otimizadas para fluxos de trabalho complexos e uso prolongado.</p>
                 </li>
                 <li>
                     <i class="fas fa-database icon"></i> {{-- Ícone adaptado --}}
-                    <p><strong>Integração de Base de Dados:</strong> Desenvolvemos e integramos bases de dados locais ou distribuídas para garantir que sua aplicação desktop *gerencia e armazena dados de forma eficiente e segura*, essencial para sistemas de gestão.</p>
+                    <p><strong>Integração de Base de Dados:</strong> Desenvolvemos e integramos bases de dados locais ou distribuídas para garantir que sua aplicação desktop gerencia e armazena dados de forma eficiente e segura, essencial para sistemas de gestão.</p>
                 </li>
                 <li>
                     <i class="fas fa-microchip icon"></i> {{-- Ícone adaptado --}}
-                    <p><strong>Otimização de Performance:</strong> Focamos na *otimização de código e recursos* para garantir que sua aplicação desktop execute rapidamente, mesmo com grandes volumes de dados ou tarefas computacionalmente intensivas.</p>
+                    <p><strong>Otimização de Performance:</strong> Focamos na otimização de código e recursos para garantir que sua aplicação desktop execute rapidamente, mesmo com grandes volumes de dados ou tarefas computacionalmente intensivas.</p>
                 </li>
                 <li>
                     <i class="fas fa-network-wired icon"></i> {{-- Ícone adaptado --}}
-                    <p><strong>Integração com Sistemas Existentes:</strong> Nossas soluções desktop são projetadas para se *integrarem perfeitamente com seu hardware, periféricos e outros softwares* existentes, proporcionando um ecossistema tecnológico coeso.</p>
+                    <p><strong>Integração com Sistemas Existentes:</strong> Nossas soluções desktop são projetadas para se integrarem perfeitamente com seu hardware, periféricos e outros softwares existentes, proporcionando um ecossistema tecnológico coeso.</p>
                 </li>
                 <li>
                     <i class="fas fa-lock icon"></i> {{-- Ícone adaptado --}}
-                    <p><strong>Segurança e Confiabilidade:</strong> Implementamos *medidas de segurança avançadas* para proteger seus dados e garantir que a aplicação desktop seja resiliente a falhas e acessos não autorizados.</p>
+                    <p><strong>Segurança e Confiabilidade:</strong> Implementamos medidas de segurança avançadas para proteger seus dados e garantir que a aplicação desktop seja resiliente a falhas e acessos não autorizados.</p>
                 </li>
                 <li>
                     <i class="fas fa-wrench icon"></i> {{-- Ícone adaptado --}}
-                    <p><strong>Implantação e Manutenção Simplificadas:</strong> Oferecemos *apoio completo na implantação* da aplicação em sua infraestrutura e garantimos *suporte e atualizações contínuas* para a longevidade e performance do software.</p>
+                    <p><strong>Implantação e Manutenção Simplificadas:</strong> Oferecemos apoio completo na implantação da aplicação em sua infraestrutura e garantimos suporte e atualizações contínuas para a longevidade e performance do software.</p>
                 </li>
             </div>
         </div>
@@ -141,23 +141,23 @@
 
     <section class="bg-gray-100 py-20 md:py-32 text-center animated-section">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16">Portfólio NeveStar: Cases de Sucesso Desktop</h2>
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16">Portfólio NeveStar - Cases de Sucesso Desktop</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="project-card">
-                    <img src="{{ asset('assets/img/desktop-pos.png') }}" alt="Sistema POS Desktop" class="mb-6 object-cover">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Sistema POS Avançado</h3>
+                    <img src="{{ asset('assets/img/POSMz.png') }}" alt="Sistema POS Desktop" class="mb-6 object-cover">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">POS System</h3>
                     <p class="text-gray-700 mb-5">Software de Ponto de Venda (POS) robusto para gestão de vendas, inventário e relatórios, otimizado para operações de varejo.</p>
                     <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
                 </div>
                 <div class="project-card">
-                    <img src="{{ asset('assets/img/desktop-hrms.png') }}" alt="Sistema de Gestão de RH" class="mb-6 object-cover">
+                    <img src="{{ asset('assets/img/RHMz.png') }}" alt="Sistema de Gestão de RH" class="mb-6 object-cover">
                     <h3 class="text-xl font-semibold mb-3 text-gray-900">RHConnect: Gestão de Pessoal</h3>
                     <p class="text-gray-700 mb-5">Aplicação desktop para gestão de recursos humanos, incluindo folha de pagamento, registo de funcionários e gestão de desempenho.</p>
                     <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
                 </div>
                 <div class="project-card">
-                    <img src="{{ asset('assets/img/desktop-crm.png') }}" alt="Software CRM Personalizado" class="mb-6 object-cover">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">ClientPulse CRM</h3>
+                    <img src="{{ asset('assets/img/MozGestao.png') }}" alt="Software CRM Personalizado" class="mb-6 object-cover">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">MozGestão</h3>
                     <p class="text-gray-700 mb-5">Sistema CRM personalizado para gestão de clientes, histórico de interações e acompanhamento de vendas, impulsionando a satisfação do cliente.</p>
                     <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
                 </div>

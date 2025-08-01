@@ -33,7 +33,7 @@
                         <i class="fas fa-envelope text-blue-600 text-5xl mb-4"></i>
                         <h3 class="text-2xl font-semibold text-gray-900 mb-3">Email</h3>
                         <p class="text-gray-700 mb-4">Envie-nos um email a qualquer momento e responderemos o mais breve possível.</p>
-                        <a href="mailto:contacto@nevestar.co.mz" class="text-blue-600 hover:underline font-medium text-lg">contacto@nevestar.co.mz</a>
+                        <!-- <a href="mailto:contacto@nevestar.co.mz" class="text-blue-600 hover:underline font-medium text-lg">contacto@nevestar.co.mz</a> -->
                         <a href="mailto:contacto@nevestar.co.mz" class="text-blue-600 hover:underline font-medium text-lg">nevestar@nevestar.co.mz</a>
                     </div>
                     <div class="card p-8 text-center flex flex-col items-center">

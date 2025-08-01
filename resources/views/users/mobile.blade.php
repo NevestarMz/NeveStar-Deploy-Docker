@@ -7,7 +7,7 @@
     <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center animated-section">
         <div class="container mx-auto px-6 flex flex-col items-center">
             <i class="fas fa-mobile-alt mobile-hero-icon text-6xl"></i>
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8">Desenvolvimento Mobile: A Sua App na Ponta dos Dedos</h1>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8">Desenvolvimento Mobile - A Sua App na Ponta dos Dedos</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Transforme a sua visão numa aplicação móvel intuitiva, performática e que alcança os seus clientes em qualquer lugar em Moçambique.
             </p>
@@ -137,23 +137,23 @@
 
     <section class="bg-gray-100 py-20 md:py-32 text-center animated-section">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16">Portfólio NeveStar: Cases de Sucesso Mobile</h2>
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16">Portfólio NeveStar - Cases de Sucesso Mobile</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="project-card">
-                    <img src="{{ asset('assets/img/AgroTech.png') }}" alt="App de E-commerce Moçambicano" class="mb-6 object-cover">
+                    <img src="{{ asset('assets/img/MozCompras.png') }}" alt="App de E-commerce Moçambicano" class="mb-6 object-cover">
                     <h3 class="text-xl font-semibold mb-3 text-gray-900">MozCompras: E-commerce Local</h3>
                     <p class="text-gray-700 mb-5">Aplicação de e-commerce robusta e intuitiva, desenhada para o mercado moçambicano, com gestão de produtos, pagamentos e logística integrada.</p>
                     <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
                 </div>
                 <div class="project-card">
-                    <img src="{{ asset('assets/img/Construa.png') }}" alt="Mobile App para Gestão de Eventos em Moçambique" class="mb-6 object-cover">
+                    <img src="{{ asset('assets/img/EventosMoz.png') }}" alt="Mobile App para Gestão de Eventos em Moçambique" class="mb-6 object-cover">
                     <h3 class="text-xl font-semibold mb-3 text-gray-900">EventosMZ: Plataforma de Eventos</h3>
                     <p class="text-gray-700 mb-5">App completa para gestão de eventos, desde o registo de participantes, agenda interativa, notificações em tempo real e bilhética digital.</p>
                     <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
                 </div>
                 <div class="project-card">
-                    <img src="{{ asset('assets/img/LogistPrime.png') }}" alt="Aplicativo de Saúde e Bem-estar" class="mb-6 object-cover">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Saúde Simples: Bem-estar na Mão</h3>
+                    <img src="{{ asset('assets/img/SaudeTop.png') }}" alt="Aplicativo de Saúde e Bem-estar" class="mb-6 object-cover">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">SaúdeTop: Bem-estar na Mão</h3>
                     <p class="text-gray-700 mb-5">Aplicativo de saúde e bem-estar que oferece agendamento de consultas, lembretes de medicação e dicas de saúde personalizadas.</p>
                     <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
                 </div>
