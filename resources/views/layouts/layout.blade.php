@@ -14,10 +14,11 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://nevestar.co.mz/">
 
-    <meta property="og:title" content="NeveStar - Inovação em Tecnologia">
-    <meta property="og:description" content="Soluções digitais e tecnológicas para empresas e projectos em Moçambique.">
-    <meta property="og:image" content="https://nevestar.co.mz/imagens/og-image.jpg">
+    <meta property="og:title" content="NeveStar - Inovação em Tecnologia em Moçambique">
+    <meta property="og:description" content="Soluções digitais e tecnológicas para empresas e projectos em Moçambique. Especialistas em desenvolvimento de software e segurança digital.">
+    <meta property="og:image" content="https://nevestar.co.mz/assets/og-image/og-image.png">
     <meta property="og:url" content="https://nevestar.co.mz">
+    <meta property="og:site_name" content="NeveStar">
     <meta property="og:type" content="Website">
 
     @vite(['resources/css/style.css', 'resources/js/app.js'])

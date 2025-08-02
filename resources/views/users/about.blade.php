@@ -54,7 +54,7 @@
 
     <section class="py-20 md:py-32 bg-white animated-section">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16">A Força da NeveStar: Nossos Especialistas</h2>
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16">A Força da NeveStar - Nossos Especialistas</h2>
             <p class="text-xl text-gray-700 mb-12 max-w-4xl mx-auto">
                 Nossa equipa é composta por profissionais apaixonados e altamente qualificados em diversas áreas da tecnologia. Combinamos experiência e criatividade para entregar soluções que fazem a diferença.
             </p>
