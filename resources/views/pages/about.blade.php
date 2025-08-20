@@ -6,12 +6,28 @@
 
 @section('meta_description', 'Conheça a NeveStar: nossa história, missão, valores e a equipa por trás das soluções tecnológicas e inovadoras que impulsionam o seu negócio em Moçambique. Contacte-nos!')
 
+@section('structured-data')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "Sobre Nós",
+  "url": "https://nevestar.co.mz/about",
+  "description": "Conheça a NeveStar: nossa história, missão, valores e a equipa por trás das soluções tecnológicas e inovadoras que impulsionam o seu negócio em Moçambique. Contacte-nos!",
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeveStar"
+  }
+}
+</script>
+@endsection
+
 @section('content')
 
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center animated-section">
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center">
         <div class="container mx-auto px-6 flex flex-col items-center">
             <i class="fas fa-users-gear about-hero-icon text-6xl"></i> {{-- Ícone representativo para 'Sobre Nós' --}}
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8">Sobre a NeveStar - Construindo o Futuro Digital de Moçambique</h1>
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">Sobre a NeveStar - Construindo o Futuro Digital de Moçambique</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Descubra a história, a paixão e o compromisso da nossa equipa em transformar ideias em soluções tecnológicas inovadoras para empresas e indivíduos em Moçambique.
             </p>
@@ -20,7 +36,7 @@
     </section>
 
     <section class="py-20 md:py-32 bg-gray-50 animated-section">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <div class="max-w-5xl mx-auto text-center">
                 <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-12">Nossa História, Nossa Missão</h2>
 
@@ -53,7 +69,7 @@
     </section>
 
     <section class="py-20 md:py-32 bg-white animated-section">
-        <div class="container mx-auto px-6 text-center">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16">A Força da NeveStar - Nossos Especialistas</h2>
             <p class="text-xl text-gray-700 mb-12 max-w-4xl mx-auto">
                 Nossa equipa é composta por profissionais apaixonados e altamente qualificados em diversas áreas da tecnologia. Combinamos experiência e criatividade para entregar soluções que fazem a diferença.
@@ -105,7 +121,7 @@
     </section>
 
     <section class="py-16 md:py-24 bg-blue-100 animated-section">
-        <div class="container mx-auto px-6 text-center">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 animate-fade-in-up">Nossos Valores Fundamentais</h2>
             <p class="text-lg text-gray-700 mb-16 max-w-4xl mx-auto">
                 Na NeveStar, cada projeto é impulsionado por um conjunto de valores que guiam a nossa forma de trabalhar e o nosso compromisso com o seu sucesso.
@@ -136,12 +152,12 @@
     </section>
 
     <section id="contact-us" class="bg-blue-700 text-white py-20 md:py-28 text-center animated-section">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">Vamos Construir Algo Incrível Juntos!</h2>
             <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">
                 Seja para discutir um novo projeto, tirar dúvidas ou simplesmente conhecer mais sobre como a NeveStar pode ajudar, estamos prontos para ouvir você.
             </p>
-            <a href="{{ route('user.contact') }}" class="bg-white text-blue-800 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg animate-zoom-in delay-300">Entre em Contacto Agora</a>
+            <a href="{{ route('pages.contact') }}" class="bg-white text-blue-800 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg animate-zoom-in delay-300">Entre em Contacto Agora</a>
         </div>
     </section>
 

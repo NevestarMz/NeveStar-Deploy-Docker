@@ -2,9 +2,26 @@
 @section('title')
     <title>NeveStar - Soluções Tecnológicas e Inovadoras em Moçambique</title>
 @endsection
+
+@section('structured-data')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomePage",
+  "name": "Página Inicial",
+  "url": "https://nevestar.co.mz",
+  "description": "A NeveStar oferece soluções em tecnologia, software e segurança digital em Moçambique.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeveStar"
+  }
+}
+</script>
+@endsection
+
 @section('content') 
     <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 md:py-32 text-center">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">NeveStar - Inovação Tecnológica à Sua Medida em Moçambique</h1>
             <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
                 Desenvolvemos soluções de software de ponta para mobile, web, desktop e gestão empresarial, impulsionando o seu sucesso.
@@ -21,28 +38,28 @@
                     <i class="fas fa-mobile-alt text-blue-600 text-5xl mb-4"></i>
                     <h3 class="text-xl font-semibold mb-3">Desenvolvimento Mobile</h3>
                     <p class="text-gray-600 mb-4">Criamos aplicações nativas e híbridas para iOS e Android, com design intuitivo e alta performance.</p>
-                    <a href="#contact" class="text-blue-600 hover:underline font-medium">Saber Mais</a>
+                    <a href="{{ route('pages.mobile') }}" class="text-blue-600 hover:underline font-medium">Saber Mais</a>
                 </div>
 
                 <div class="bg-white p-8 rounded-lg card-hover-effect flex flex-col items-center animate-fade-in-up delay-100">
                     <i class="fas fa-globe text-blue-600 text-5xl mb-4"></i>
                     <h3 class="text-xl font-semibold mb-3">Desenvolvimento Web</h3>
                     <p class="text-gray-600 mb-4">Construímos websites dinâmicos, e-commerce robustos e sistemas web personalizados para sua empresa.</p>
-                    <a href="#contact" class="text-blue-600 hover:underline font-medium">Saber Mais</a>
+                    <a href="{{ route('pages.web') }}" class="text-blue-600 hover:underline font-medium">Saber Mais</a>
                 </div>
 
                 <div class="bg-white p-8 rounded-lg card-hover-effect flex flex-col items-center animate-fade-in-up delay-100">
                     <i class="fas fa-laptop-code text-blue-600 text-5xl mb-4"></i>
                     <h3 class="text-xl font-semibold mb-3">Desenvolvimento Desktop</h3>
                     <p class="text-gray-600 mb-4">Soluções desktop poderosas e eficientes para otimizar operações internas e fluxos de trabalho.</p>
-                    <a href="#contact" class="text-blue-600 hover:underline font-medium">Saber Mais</a>
+                    <a href="{{ route('pages.desktop') }}" class="text-blue-600 hover:underline font-medium">Saber Mais</a>
                 </div>
 
                 <div class="bg-white p-8 rounded-lg card-hover-effect flex flex-col items-center animate-fade-in-up delay-100">
                     <i class="fas fa-chart-line text-blue-600 text-5xl mb-4"></i>
                     <h3 class="text-xl font-semibold mb-3">Sistemas de Gestão Empresarial</h3>
                     <p class="text-gray-600 mb-4">Implementamos ERP, CRM, BI e outras ferramentas para automação e inteligência de negócios.</p>
-                    <a href="{{ route('user.software') }}" class="text-blue-600 hover:underline font-medium">Saber Mais</a>
+                    <a href="{{ route('pages.software') }}" class="text-blue-600 hover:underline font-medium">Saber Mais</a>
                 </div>
             </div>
         </div>
@@ -119,7 +136,7 @@
     </section>
 
     <section id="about" class="py-16 md:py-24 bg-gray-50 animated-section">
-        <div class="container mx-auto px-6 text-center">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 animate-fade-in-up">Porque Escolher a NeveStar?</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="p-6 rounded-lg bg-white text-center card-hover-effect animate-fade-in-up delay-100">

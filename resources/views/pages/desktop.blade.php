@@ -6,12 +6,28 @@
 
 @section('meta_description', 'Desenvolvimento de software desktop robusto e personalizado em Moçambique. Otimize seus processos, melhore a produtividade e garanta performance com a NeveStar.')
 
+@section('structured-data')
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "ServiceDasktopPage",
+    "name": "Serviços de Desenvolvimento Desktop",
+    "url": "https://nevestar.co.mz/services/desktop",
+    "description": "Desenvolvimento de software desktop robusto e personalizado em Moçambique. Otimize seus processos, melhore a produtividade e garanta performance com a NeveStar.",
+    "publisher": {
+        "@type": "Organization",
+        "name": "NeveStar"
+    }
+    }
+    </script>
+@endsection
+
 @section('content')
 
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center animated-section">
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center">
         <div class="container mx-auto px-6 flex flex-col items-center">
-            <i class="fas fa-desktop desktop-hero-icon text-6xl"></i> {{-- Ícone mudado para desktop --}}
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8">Desenvolvimento Desktop - Poder e Performance ao Seu Alcance</h1>
+            <i class="fas fa-desktop desktop-hero-icon text-6xl"></i>
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">Desenvolvimento Desktop - Poder e Performance ao Seu Alcance</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Crie soluções de software desktop personalizadas e robustas para otimizar operações internas, aumentar a produtividade e garantir segurança em Moçambique.
             </p>
@@ -20,7 +36,7 @@
     </section>
 
     <section class="py-20 md:py-32 bg-gray-50 animated-section">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <div class="max-w-5xl mx-auto">
                 <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-12 text-center">Software Desktop NeveStar: Eficiência e Controle para Seu Negócio</h2>
 
@@ -55,7 +71,7 @@
     </section>
 
     <section class="py-20 md:py-32 bg-white animated-section">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16 text-center">Nossas Abordagens e Metodologia em Desenvolvimento Desktop</h2>
             <div class="max-w-5xl mx-auto custom-bullet-list text-xl text-gray-700">
                 <li>
@@ -87,7 +103,7 @@
     </section>
 
     <section class="py-20 md:py-32 bg-blue-50 animated-section">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16 text-center">O Que Incluímos no Seu Projeto de Desenvolvimento Desktop</h2>
             <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card p-6 text-center">
@@ -140,26 +156,26 @@
     </section>
 
     <section class="bg-gray-100 py-20 md:py-32 text-center animated-section">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16">Portfólio NeveStar - Cases de Sucesso Desktop</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="project-card">
                     <img src="{{ asset('assets/img/POSMz.png') }}" alt="Sistema POS Desktop" class="mb-6 object-cover">
                     <h3 class="text-xl font-semibold mb-3 text-gray-900">POS System</h3>
                     <p class="text-gray-700 mb-5">Software de Ponto de Venda (POS) robusto para gestão de vendas, inventário e relatórios, otimizado para operações de varejo.</p>
-                    <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
+                    <a href="{{ route('details.detalhes', 'posmz') }}" class="details-button bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full" data="Clinica-Mz">Ver Detalhes</a>
                 </div>
                 <div class="project-card">
                     <img src="{{ asset('assets/img/RHMz.png') }}" alt="Sistema de Gestão de RH" class="mb-6 object-cover">
                     <h3 class="text-xl font-semibold mb-3 text-gray-900">RHConnect: Gestão de Pessoal</h3>
                     <p class="text-gray-700 mb-5">Aplicação desktop para gestão de recursos humanos, incluindo folha de pagamento, registo de funcionários e gestão de desempenho.</p>
-                    <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
+                    <a href="{{ route('details.detalhes', 'rhmz') }}" class="details-button bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full" data="Clinica-Mz">Ver Detalhes</a>
                 </div>
                 <div class="project-card">
                     <img src="{{ asset('assets/img/MozGestao.png') }}" alt="Software CRM Personalizado" class="mb-6 object-cover">
                     <h3 class="text-xl font-semibold mb-3 text-gray-900">MozGestão</h3>
                     <p class="text-gray-700 mb-5">Sistema CRM personalizado para gestão de clientes, histórico de interações e acompanhamento de vendas, impulsionando a satisfação do cliente.</p>
-                    <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
+                    <a href="{{ route('details.detalhes', 'gestaomz') }}" class="details-button bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full" data="Clinica-Mz">Ver Detalhes</a>
                 </div>
             </div>
         </div>

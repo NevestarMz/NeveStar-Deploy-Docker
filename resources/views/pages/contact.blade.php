@@ -6,12 +6,28 @@
 
 @section('meta_description', 'Entre em contacto com a NeveStar para soluções tecnológicas em Moçambique. Estamos prontos para atender suas dúvidas, oferecer orçamentos e iniciar seu projeto. Telefone, Email, Localização.')
 
+@section('structured-data')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contacte-nos",
+  "url": "https://nevestar.co.mz/contact",
+  "description": "Entre em contacto com a NeveStar para obter suporte ou solicitar serviços em Moçambique.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeveStar"
+  }
+}
+</script>
+@endsection
+
 @section('content')
 
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center animated-section">
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center">
         <div class="container mx-auto px-6 flex flex-col items-center">
             <i class="fas fa-headset contact-hero-icon text-6xl"></i> {{-- Ícone representativo para 'Contacto' --}}
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8">Fale Connosco - A NeveStar Está Pronta para Ouvir Você</h1>
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">Fale Connosco - A NeveStar Está Pronta para Ouvir Você</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Tem dúvidas, precisa de um orçamento ou quer começar um novo projeto? A nossa equipa está à disposição para ajudar.
             </p>

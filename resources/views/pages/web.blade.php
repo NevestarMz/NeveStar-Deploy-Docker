@@ -4,13 +4,31 @@
     <title>Desenvolvimento Web - NeveStar | Soluções Tecnológicas em Moçambique</title>
 @endsection
 
+@section('meta_description', 'Crie uma presença online de sucesso com a NeveStar. Desenvolvemos websites e sistemas web personalizados que impulsionam o seu negócio em Moçambique. Solicite um orçamento hoje mesmo!')
+
+@section('structured-data')
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "ServiceWebPage",
+    "name": "Desenvolvimento Web",
+    "url": "https://nevestar.co.mz/services/web",
+    "description": "Criamos websites e sistemas web personalizados que não apenas impressionam, mas também impulsionam o seu negócio, garantindo visibilidade e resultados no mercado moçambicano.",
+    "publisher": {
+        "@type": "Organization",
+        "name": "NeveStar"
+    }
+    }
+    </script>
+@endsection
+
 @section('content')
 
 
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center animated-section">
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center">
         <div class="container mx-auto px-6 flex flex-col items-center">
             <i class="fas fa-globe web-hero-icon text-6xl"></i>
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8">Desenvolvimento Web - Sua Presença Online de Sucesso em Moçambique</h1>
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">Desenvolvimento Web - Sua Presença Online de Sucesso em Moçambique</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Criamos websites e sistemas web personalizados que não apenas impressionam, mas também impulsionam o seu negócio, garantindo visibilidade e resultados no mercado moçambicano.
             </p>
@@ -19,7 +37,7 @@
     </section>
 
     <section class="py-20 md:py-32 bg-gray-50 animated-section">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <div class="max-w-5xl mx-auto">
                 <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-12 text-center">Porquê Investir num Website Profissional com a NeveStar?</h2>
 
@@ -54,7 +72,7 @@
     </section>
 
     <section class="py-20 md:py-32 bg-white animated-section">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16 text-center">Nossas Especialidades e Abordagens em Desenvolvimento Web</h2>
             <div class="max-w-5xl mx-auto custom-bullet-list text-xl text-gray-700">
                 <li>
@@ -90,7 +108,7 @@
     </section>
 
     <section class="py-20 md:py-32 bg-blue-50 animated-section">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16 text-center">Nosso Processo de Desenvolvimento Web NeveStar - Transparência e Eficiência</h2>
             <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card p-6 text-center">
@@ -138,33 +156,33 @@
     </section>
 
     <section class="bg-gray-100 py-20 md:py-32 text-center animated-section">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16">Portfólio NeveStar - Projetos Web que Geram Impacto</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="project-card">
                     <img src="{{ asset('assets/img/AgroMZ.png') }}" alt="Portal Agrícola Moçambicano" class="object-cover">
                     <h3 class="text-xl font-semibold mb-3 text-gray-900">Portal AgroMZ: Agricultura Digital</h3>
                     <p class="text-gray-700 mb-5">Um portal abrangente para a comunidade agrícola moçambicana, com notícias, cotações de produtos e recursos interativos.</p>
-                    <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
+                    <a href="{{ route('details.detalhes', 'agromz') }}" class="details-button bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full">Ver Detalhes</a>
                 </div>
                 <div class="project-card">
                     <img src="{{ asset('assets/img/ModaMZ.png') }}" alt="Loja Online de Moda Moçambicana" class="object-cover">
                     <h3 class="text-xl font-semibold mb-3 text-gray-900">ModaMZ: E-commerce de Vestuário</h3>
                     <p class="text-gray-700 mb-5">Plataforma de e-commerce de moda com foco em design responsivo, experiência de compra intuitiva e integração com redes sociais.</p>
-                    <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
+                    <a href="{{ route('details.detalhes', 'modamz') }}" class="details-button bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full">Ver Detalhes</a>
                 </div>
                 <div class="project-card">
                     <img src="{{ asset('assets/img/SaudeMZ.png') }}" alt="Sistema de Gestão para Clínicas" class="object-cover">
                     <h3 class="text-xl font-semibold mb-3 text-gray-900">Gestão Clínica Pro: Saúde Eficiente</h3>
                     <p class="text-gray-700 mb-5">Sistema web personalizado para clínicas, otimizando agendamentos, gestão de pacientes e prontuários eletrónicos.</p>
-                    <a href="#" class="text-blue-600 hover:underline font-medium text-lg">Ver Detalhes</a>
+                    <a href="{{ route('details.detalhes', 'saudemz') }}" class="details-button bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full">Ver Detalhes</a>
                 </div>
                 </div>
         </div>
     </section>
 
     <section id="contact-form" class="bg-blue-600 text-white py-20 md:py-28 text-center animated-section">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">Pronto para criar um Website de Alto Impacto e Sucesso em Moçambique?</h2>
             <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">
                 Fale com a nossa equipa de especialistas da NeveStar para discutir o seu projeto web e receber um orçamento personalizado que impulsionará a sua presença digital.

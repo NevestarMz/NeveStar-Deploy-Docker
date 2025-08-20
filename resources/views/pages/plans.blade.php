@@ -6,6 +6,22 @@
 
 @section('meta_description', 'Descubra os planos de website da NeveStar, desde soluções básicas a e-commerce premium. Preços competitivos e serviços completos para o seu negócio em Moçambique.')
 
+@section('structured-data')
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "PlansPage",
+    "name": "Planos de Serviços",
+    "url": "https://nevestar.co.mz/orcament/plans",
+    "description": "Descubra os planos de website da NeveStar, desde soluções básicas a e-commerce premium. Preços competitivos e serviços completos para o seu negócio em Moçambique.",
+    "publisher": {
+        "@type": "Organization",
+        "name": "NeveStar"
+    }
+    }
+    </script>
+@endsection
+
 @section('content')
 
     <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 md:py-32 text-center">
@@ -37,7 +53,7 @@
                             <li class="flex items-center">Suporte Limitado</li>
                         </ul>
                     </div>
-                    <a href="{{ route('user.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
+                    <a href="{{ route('pages.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
                 </div>
 
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-200">
@@ -53,7 +69,7 @@
                             <li class="flex items-center">Manutenção Mensal (básica)</li>
                         </ul>
                     </div>
-                    <a href="{{ route('user.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
+                    <a href="{{ route('pages.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
                 </div>
 
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-300">
@@ -69,7 +85,7 @@
                             <li class="flex items-center">Treinamento para Publicação</li>
                         </ul>
                     </div>
-                    <a href="{{ route('user.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
+                    <a href="{{ route('pages.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-400">
                     <div>
@@ -84,7 +100,7 @@
                             <li class="flex items-center">Suporte Prioritário 24/7</li>
                         </ul>
                     </div>
-                    <a href="{{ route('user.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
+                    <a href="{{ route('pages.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
                 </div>
 
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-400">
@@ -101,7 +117,7 @@
                             <li class="flex items-center">Publicação na App Store e Google Play</li>
                         </ul>
                     </div>
-                    <a href="{{ route('user.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
+                    <a href="{{ route('pages.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-400">
                     <div>
@@ -116,7 +132,7 @@
                             <li class="flex items-center">Suporte e Treinamento</li>
                         </ul>
                     </div>
-                    <a href="{{ route('user.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
+                    <a href="{{ route('pages.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
                 </div>
                 
             </div>
@@ -148,12 +164,12 @@
     </section>
 
     <section class="bg-blue-700 text-white py-16 md:py-20 text-center">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para Lançar o Seu Projeto Online?</h2>
             <p class="text-lg mb-8 max-w-2xl mx-auto">
                 Entre em contacto com a NeveStar hoje mesmo para uma consulta gratuita e personalize o seu plano de website.
             </p>
-            <a href="{{ route('user.contact') }}" class="bg-white text-blue-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg">Obtenha um Orçamento Grátis</a>
+            <a href="{{ route('pages.contact') }}" class="bg-white text-blue-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg">Obtenha um Orçamento Grátis</a>
         </div>
     </section>
     

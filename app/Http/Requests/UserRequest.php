@@ -21,13 +21,9 @@ class UserRequest extends FormRequest
      */
     public function rules(): array
     {
-        $user = $this->route('user');
+        // $user = $this->route('user');
 
-        return [
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email,' . ($user ? $user->id : null),
-            'password' => 'required_if:password,!=,null|min:6',
-        ];
+        return [];
     }
 
     public function messages(): array
