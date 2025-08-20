@@ -5,10 +5,10 @@
     {{-- O conteúdo principal é preenchido com as variáveis da view --}}
     <main class="container mx-auto px-6 py-12 lg:px-20 min-h-[60vh]">
         <section id="project-details" class="bg-white p-8 rounded-2xl shadow-lg overflow-hidden">
-            <a href="/" class="inline-flex items-center mb-5 justify-center rounded-xl border border-gray-300 bg-white px-6 py-3 font-medium text-gray-800 shadow-sm hover:bg-gray-50 transition">
+            <button onclick="history.back()" class="inline-flex items-center mb-5 justify-center rounded-xl border border-gray-300 bg-white px-6 py-3 font-medium text-gray-800 shadow-sm hover:bg-gray-50 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M10 19l-7-7 7-7v14zm3-14h2v14h-2V5z"/></svg>
                 Voltar à página anterior
-            </a>
+            </button>
             <div class="grid grid-cols-1 gap-12 items-start">
                 <div>
                     <div class="flex justify-between items-center mb-4">
