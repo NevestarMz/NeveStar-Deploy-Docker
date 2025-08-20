@@ -10,6 +10,7 @@ class ProjectController extends Controller
     public function show($projectId) 
     {
         // Lista de serviços (exemplo fixo, mas poderia vir do BD)
+        // Dados de projectos
         $projectsData = [
             'agromz' => [
                 'title' => "Portal AgroMZ",
@@ -17,7 +18,7 @@ class ProjectController extends Controller
                 'status' => ['text' => "Online", 'class' => "bg-green-100 text-green-800"],
                 'about' => "O Portal AgroMZ é uma plataforma digital robusta, concebida para ser o epicentro da informação agrícola em Moçambique. O seu principal objetivo é democratizar o acesso a dados cruciais de mercado, meteorologia e boas práticas, capacitando agricultores de pequena e grande escala a tomar decisões mais informadas. A longo prazo, o portal visa fortalecer a segurança alimentar e a sustentabilidade do setor agrícola no país.",
                 'audience' => "Agricultores, cooperativas, investidores do agronegócio, estudantes de agronomia e decisores políticos.",
-                'image' => "http://127.0.0.1/assets/img/AgroMZ.png",
+                'image' => "https://nevestar.co.mz/assets/img/AgroMZ.png",
                 'features' => [
                     "<strong>Cotações do Mercado:</strong> Integração com fontes de dados locais e internacionais para fornecer preços em tempo real de milho, feijão, algodão, etc.",
                     "<strong>Previsão do Tempo Georreferenciada:</strong> Mapas interativos com previsões de chuva, temperatura e vento por distrito.",
@@ -38,7 +39,7 @@ class ProjectController extends Controller
                 'status' => ['text' => "Em Desenvolvimento", 'class' => "bg-yellow-100 text-yellow-800"],
                 'about' => "ModaMZ é uma plataforma de e-commerce de vanguarda, projetada para ser visualmente impactante e funcionalmente impecável. O foco está em criar uma jornada de compra imersiva, desde a descoberta do produto até ao checkout. A arquitetura headless (com API) garante performance e flexibilidade para futuras integrações, como aplicações móveis e assistentes virtuais.",
                 'audience' => "Provador virtual com Realidade Aumentada (em fase de prova de conceito), recomendações de produtos personalizadas por IA e uma experiência de checkout ultra-rápida.",
-                'image' => "http://127.0.0.1/assets/img/ModaMZ.png",
+                'image' => "https://nevestar.co.mz/assets/img/ModaMZ.png",
                 'features' => [
                     "<strong>Catálogo Dinâmico:</strong> Filtros avançados (cor, tamanho, preço, estilo), busca preditiva e vídeos de produtos.",
                     "<strong>Gestão de Contas de Cliente:</strong> Histórico de pedidos, lista de desejos e gestão de moradas.",
@@ -59,7 +60,7 @@ class ProjectController extends Controller
                 'status' => ['text' => "Em Desenvolvimento", 'class' => "bg-yellow-100 text-yellow-800"],
                 'about' => "Gestão Clínica Pro é um sistema em nuvem (SaaS) que centraliza todas as operações de uma clínica. Desde o primeiro contacto do paciente até à faturação, a plataforma foi desenhada para ser intuitiva para médicos, rececionistas e administradores, libertando-os de tarefas manuais para que se possam focar no mais importante: o cuidado ao paciente.",
                 'audience' => "A plataforma é desenvolvida seguindo as melhores práticas de segurança, com encriptação de dados em repouso e em trânsito, e está a ser preparada para cumprir com as normas de proteção de dados como a LGPD.",
-                'image' => "http://127.0.0.1/assets/img/SaudeMZ.png",
+                'image' => "https://nevestar.co.mz/assets/img/SaudeMZ.png",
                 'features' => [
                     "<strong>Portal do Paciente:</strong> Área onde os pacientes podem marcar consultas, ver resultados de exames e comunicar com a clínica.",
                     "<strong>Prontuário Eletrónico Configurável:</strong> Modelos de anamnese e evolução adaptáveis a cada especialidade médica.",
@@ -81,7 +82,7 @@ class ProjectController extends Controller
                 'status' => ['text' => "Em Desenvolvimento", 'class' => "bg-yellow-100 text-yellow-800"],
                 'about' => "Gestão Clínica Pro é um sistema em nuvem (SaaS) que centraliza todas as operações de uma clínica. Desde o primeiro contacto do paciente até à faturação, a plataforma foi desenhada para ser intuitiva para médicos, rececionistas e administradores, libertando-os de tarefas manuais para que se possam focar no mais importante: o cuidado ao paciente.",
                 'audience' => "A plataforma é desenvolvida seguindo as melhores práticas de segurança, com encriptação de dados em repouso e em trânsito, e está a ser preparada para cumprir com as normas de proteção de dados como a LGPD.",
-                'image' => "http://127.0.0.1/assets/img/MozConstrua.png",
+                'image' => "https://nevestar.co.mz/assets/img/MozConstrua.png",
                 'features' => [
                     "<strong>Portal do Paciente:</strong> Área onde os pacientes podem marcar consultas, ver resultados de exames e comunicar com a clínica.",
                     "<strong>Prontuário Eletrónico Configurável:</strong> Modelos de anamnese e evolução adaptáveis a cada especialidade médica.",
@@ -102,7 +103,7 @@ class ProjectController extends Controller
                 'status' => ['text' => "Em Desenvolvimento", 'class' => "bg-yellow-100 text-yellow-800"],
                 'about' => "Gestão Clínica Pro é um sistema em nuvem (SaaS) que centraliza todas as operações de uma clínica. Desde o primeiro contacto do paciente até à faturação, a plataforma foi desenhada para ser intuitiva para médicos, rececionistas e administradores, libertando-os de tarefas manuais para que se possam focar no mais importante: o cuidado ao paciente.",
                 'audience' => "A plataforma é desenvolvida seguindo as melhores práticas de segurança, com encriptação de dados em repouso e em trânsito, e está a ser preparada para cumprir com as normas de proteção de dados como a LGPD.",
-                'image' => "http://127.0.0.1/assets/img/MozAgroTech.png",
+                'image' => "https://nevestar.co.mz/assets/img/MozAgroTech.png",
                 'features' => [
                     "<strong>Portal do Paciente:</strong> Área onde os pacientes podem marcar consultas, ver resultados de exames e comunicar com a clínica.",
                     "<strong>Prontuário Eletrónico Configurável:</strong> Modelos de anamnese e evolução adaptáveis a cada especialidade médica.",
@@ -123,7 +124,7 @@ class ProjectController extends Controller
                 'status' => ['text' => "Em Desenvolvimento", 'class' => "bg-yellow-100 text-yellow-800"],
                 'about' => "Gestão Clínica Pro é um sistema em nuvem (SaaS) que centraliza todas as operações de uma clínica. Desde o primeiro contacto do paciente até à faturação, a plataforma foi desenhada para ser intuitiva para médicos, rececionistas e administradores, libertando-os de tarefas manuais para que se possam focar no mais importante: o cuidado ao paciente.",
                 'audience' => "A plataforma é desenvolvida seguindo as melhores práticas de segurança, com encriptação de dados em repouso e em trânsito, e está a ser preparada para cumprir com as normas de proteção de dados como a LGPD.",
-                'image' => "http://127.0.0.1/assets/img/MozLogistica.png",
+                'image' => "https://nevestar.co.mz/assets/img/MozLogistica.png",
                 'features' => [
                     "<strong>Portal do Paciente:</strong> Área onde os pacientes podem marcar consultas, ver resultados de exames e comunicar com a clínica.",
                     "<strong>Prontuário Eletrónico Configurável:</strong> Modelos de anamnese e evolução adaptáveis a cada especialidade médica.",
@@ -145,7 +146,7 @@ class ProjectController extends Controller
                 'status' => ['text' => "Em Desenvolvimento", 'class' => "bg-yellow-100 text-yellow-800"],
                 'about' => "Gestão Clínica Pro é um sistema em nuvem (SaaS) que centraliza todas as operações de uma clínica. Desde o primeiro contacto do paciente até à faturação, a plataforma foi desenhada para ser intuitiva para médicos, rececionistas e administradores, libertando-os de tarefas manuais para que se possam focar no mais importante: o cuidado ao paciente.",
                 'audience' => "A plataforma é desenvolvida seguindo as melhores práticas de segurança, com encriptação de dados em repouso e em trânsito, e está a ser preparada para cumprir com as normas de proteção de dados como a LGPD.",
-                'image' => "http://127.0.0.1/assets/img/POSMz.png",
+                'image' => "https://nevestar.co.mz/assets/img/POSMz.png",
                 'features' => [
                     "<strong>Portal do Paciente:</strong> Área onde os pacientes podem marcar consultas, ver resultados de exames e comunicar com a clínica.",
                     "<strong>Prontuário Eletrónico Configurável:</strong> Modelos de anamnese e evolução adaptáveis a cada especialidade médica.",
@@ -166,7 +167,7 @@ class ProjectController extends Controller
                 'status' => ['text' => "Em Desenvolvimento", 'class' => "bg-yellow-100 text-yellow-800"],
                 'about' => "Gestão Clínica Pro é um sistema em nuvem (SaaS) que centraliza todas as operações de uma clínica. Desde o primeiro contacto do paciente até à faturação, a plataforma foi desenhada para ser intuitiva para médicos, rececionistas e administradores, libertando-os de tarefas manuais para que se possam focar no mais importante: o cuidado ao paciente.",
                 'audience' => "A plataforma é desenvolvida seguindo as melhores práticas de segurança, com encriptação de dados em repouso e em trânsito, e está a ser preparada para cumprir com as normas de proteção de dados como a LGPD.",
-                'image' => "http://127.0.0.1/assets/img/RHMz.png",
+                'image' => "https://nevestar.co.mz/assets/img/RHMz.png",
                 'features' => [
                     "<strong>Portal do Paciente:</strong> Área onde os pacientes podem marcar consultas, ver resultados de exames e comunicar com a clínica.",
                     "<strong>Prontuário Eletrónico Configurável:</strong> Modelos de anamnese e evolução adaptáveis a cada especialidade médica.",
@@ -187,7 +188,7 @@ class ProjectController extends Controller
                 'status' => ['text' => "Em Desenvolvimento", 'class' => "bg-yellow-100 text-yellow-800"],
                 'about' => "Gestão Clínica Pro é um sistema em nuvem (SaaS) que centraliza todas as operações de uma clínica. Desde o primeiro contacto do paciente até à faturação, a plataforma foi desenhada para ser intuitiva para médicos, rececionistas e administradores, libertando-os de tarefas manuais para que se possam focar no mais importante: o cuidado ao paciente.",
                 'audience' => "A plataforma é desenvolvida seguindo as melhores práticas de segurança, com encriptação de dados em repouso e em trânsito, e está a ser preparada para cumprir com as normas de proteção de dados como a LGPD.",
-                'image' => "http://127.0.0.1/assets/img/MozGestao.png",
+                'image' => "https://nevestar.co.mz/assets/img/MozGestao.png",
                 'features' => [
                     "<strong>Portal do Paciente:</strong> Área onde os pacientes podem marcar consultas, ver resultados de exames e comunicar com a clínica.",
                     "<strong>Prontuário Eletrónico Configurável:</strong> Modelos de anamnese e evolução adaptáveis a cada especialidade médica.",
@@ -209,7 +210,7 @@ class ProjectController extends Controller
                 'status' => ['text' => "Em Desenvolvimento", 'class' => "bg-yellow-100 text-yellow-800"],
                 'about' => "Gestão Clínica Pro é um sistema em nuvem (SaaS) que centraliza todas as operações de uma clínica. Desde o primeiro contacto do paciente até à faturação, a plataforma foi desenhada para ser intuitiva para médicos, rececionistas e administradores, libertando-os de tarefas manuais para que se possam focar no mais importante: o cuidado ao paciente.",
                 'audience' => "A plataforma é desenvolvida seguindo as melhores práticas de segurança, com encriptação de dados em repouso e em trânsito, e está a ser preparada para cumprir com as normas de proteção de dados como a LGPD.",
-                'image' => "http://127.0.0.1/assets/img/MozCompras.png",
+                'image' => "https://nevestar.co.mz/assets/img/MozCompras.png",
                 'features' => [
                     "<strong>Portal do Paciente:</strong> Área onde os pacientes podem marcar consultas, ver resultados de exames e comunicar com a clínica.",
                     "<strong>Prontuário Eletrónico Configurável:</strong> Modelos de anamnese e evolução adaptáveis a cada especialidade médica.",
@@ -230,7 +231,7 @@ class ProjectController extends Controller
                 'status' => ['text' => "Em Desenvolvimento", 'class' => "bg-yellow-100 text-yellow-800"],
                 'about' => "Gestão Clínica Pro é um sistema em nuvem (SaaS) que centraliza todas as operações de uma clínica. Desde o primeiro contacto do paciente até à faturação, a plataforma foi desenhada para ser intuitiva para médicos, rececionistas e administradores, libertando-os de tarefas manuais para que se possam focar no mais importante: o cuidado ao paciente.",
                 'audience' => "A plataforma é desenvolvida seguindo as melhores práticas de segurança, com encriptação de dados em repouso e em trânsito, e está a ser preparada para cumprir com as normas de proteção de dados como a LGPD.",
-                'image' => "http://127.0.0.1/assets/img/EventosMoz.png",
+                'image' => "https://nevestar.co.mz/assets/img/EventosMoz.png",
                 'features' => [
                     "<strong>Portal do Paciente:</strong> Área onde os pacientes podem marcar consultas, ver resultados de exames e comunicar com a clínica.",
                     "<strong>Prontuário Eletrónico Configurável:</strong> Modelos de anamnese e evolução adaptáveis a cada especialidade médica.",
@@ -251,7 +252,7 @@ class ProjectController extends Controller
                 'status' => ['text' => "Em Desenvolvimento", 'class' => "bg-yellow-100 text-yellow-800"],
                 'about' => "Gestão Clínica Pro é um sistema em nuvem (SaaS) que centraliza todas as operações de uma clínica. Desde o primeiro contacto do paciente até à faturação, a plataforma foi desenhada para ser intuitiva para médicos, rececionistas e administradores, libertando-os de tarefas manuais para que se possam focar no mais importante: o cuidado ao paciente.",
                 'audience' => "A plataforma é desenvolvida seguindo as melhores práticas de segurança, com encriptação de dados em repouso e em trânsito, e está a ser preparada para cumprir com as normas de proteção de dados como a LGPD.",
-                'image' => "http://127.0.0.1/assets/img/SaudeTop.png",
+                'image' => "https://nevestar.co.mz/assets/img/SaudeTop.png",
                 'features' => [
                     "<strong>Portal do Paciente:</strong> Área onde os pacientes podem marcar consultas, ver resultados de exames e comunicar com a clínica.",
                     "<strong>Prontuário Eletrónico Configurável:</strong> Modelos de anamnese e evolução adaptáveis a cada especialidade médica.",

@@ -29,7 +29,7 @@ Route::get('/contact', [UserController::class, 'contact'])->name('pages.contact'
 //     return response('OK')->cookie('cookies_accepted', 'yes', 60*24*30); // 30 dias
 //  });
 
-
+// Rotas de Cookies, Termos de Utilização e Privacidade
 Route::get('/termos', [LegalController::class, 'termos'])->name('termos');
 Route::get('/privacidade', [LegalController::class, 'privacidade'])->name('privacidade');
 Route::get('/politica-de-cookies', [LegalController::class, 'cookiesPolicy'])->name('legal.cookies');
