@@ -7,6 +7,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/css/style.css',
+                'resources/css/form_plans.css',
                 'resources/js/app.js',
             ],
             refresh: true,
