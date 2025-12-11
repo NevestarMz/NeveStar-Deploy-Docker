@@ -9,15 +9,20 @@
 @section('structured-data')
     <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
-    "@type": "ServiceWebPage",
-    "name": "Desenvolvimento Web",
-    "url": "https://nevestar.co.mz/services/web",
-    "description": "Criamos websites e sistemas web personalizados que não apenas impressionam, mas também impulsionam o seu negócio, garantindo visibilidade e resultados no mercado moçambicano.",
-    "publisher": {
-        "@type": "Organization",
-        "name": "NeveStar"
-    }
+        "@@context": "https://schema.org",
+        "@@type": "ServiceWebPage",
+        "name": "Desenvolvimento Web",
+        "url": "https://nevestar.co.mz/services/web",
+        "description": "Criamos websites e sistemas web personalizados que não apenas impressionam, mas também impulsionam o seu negócio, garantindo visibilidade e resultados no mercado moçambicano.",
+        "publisher": {
+            "@@type": "Organization",
+            "name": "NeveStar"
+            "logo": {
+                "@@type": "ImageObject",
+                // Adicionar o URL do logo é uma boa prática
+                "url": "https://nevestar.co.mz/assets/logo.png"
+            }
+        }
     }
     </script>
 @endsection

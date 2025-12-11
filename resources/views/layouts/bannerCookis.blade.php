@@ -6,7 +6,7 @@
             <div class="flex-1 text-center">
                 <h2 class="text-2xl font-semibold mb-1">🍪 Utilizamos Cookies</h2>
                 <p class="text-blue-100 text-sm lg:text-base leading-relaxed">
-                    No <span class="font-bold">NeveStar</span>, utilizamos cookies para melhorar a experiência, analisar tráfego e personalizar conteúdo.
+                    Na <span class="font-bold">NeveStar</span>, utilizamos cookies para melhorar a experiência, analisar tráfego e personalizar conteúdo.
                     Pode aceitar todos ou personalizar. <a href="{{ route('legal.cookies') }}" class="underline text-yellow-300 hover:text-yellow-200 transition">Política de Cookies</a>
                 </p>
                 <div class="mt-2 text-xs lg:mb-4">

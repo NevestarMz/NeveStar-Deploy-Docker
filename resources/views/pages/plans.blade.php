@@ -9,15 +9,20 @@
 @section('structured-data')
     <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
-    "@type": "PlansPage",
-    "name": "Planos de Serviços",
-    "url": "https://nevestar.co.mz/orcament/plans",
-    "description": "Descubra os planos de website da NeveStar, desde soluções básicas a e-commerce premium. Preços competitivos e serviços completos para o seu negócio em Moçambique.",
-    "publisher": {
-        "@type": "Organization",
-        "name": "NeveStar"
-    }
+        "@@context": "https://schema.org",
+        "@@type": "PlansPage",
+        "name": "Planos de Serviços",
+        "url": "https://nevestar.co.mz/orcament/plans",
+        "description": "Descubra os planos de website da NeveStar, desde soluções básicas a e-commerce premium. Preços competitivos e serviços completos para o seu negócio em Moçambique.",
+        "publisher": {
+            "@@type": "Organization",
+            "name": "NeveStar" 
+            "logo": {
+                "@@type": "ImageObject",
+                // Adicionar o URL do logo é uma boa prática
+                "url": "https://nevestar.co.mz/assets/logo.png"
+            }
+        }
     }
     </script>
 @endsection
@@ -40,7 +45,7 @@
             <p class="text-lg text-gray-700 mb-16 max-w-4xl mx-auto">
                 Na NeveStar, acreditamos que ter uma presença online eficaz não deve ser complicado. Explore nossos planos detalhados e escolha a opção que melhor se encaixa nas suas ambições e orçamento.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-100">
                     <div>
                         <h3 class="text-2xl font-bold text-blue-700 mb-4">Sites Básicos</h3>
@@ -53,7 +58,9 @@
                             <li class="flex items-center">Suporte Limitado</li>
                         </ul>
                     </div>
-                    <a href="{{ route('pages.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
+                    <button type="button" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold open-modal-btn"
+                    data-service-name="Criação de Sites Básicos" data-service-price="7000"
+                    >Solicitar</button>
                 </div>
 
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-200">
@@ -69,7 +76,9 @@
                             <li class="flex items-center">Manutenção Mensal (básica)</li>
                         </ul>
                     </div>
-                    <a href="{{ route('pages.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
+                    <button type="button" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold open-modal-btn"
+                    data-service-name="Criação de Sites Normais" data-service-price="10000"
+                    >Solicitar</button>
                 </div>
 
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-300">
@@ -85,7 +94,9 @@
                             <li class="flex items-center">Treinamento para Publicação</li>
                         </ul>
                     </div>
-                    <a href="{{ route('pages.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
+                    <button type="button" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold open-modal-btn"
+                    data-service-name="Criação de Blogs" data-service-price="14000"
+                    >Solicitar</button>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-400">
                     <div>
@@ -100,7 +111,10 @@
                             <li class="flex items-center">Suporte Prioritário 24/7</li>
                         </ul>
                     </div>
-                    <a href="{{ route('pages.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
+                    <button type="button" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold open-modal-btn"
+                        data-service-name="Criação de Sites Premium" data-service-price="30000">
+                        Solicitar
+                    </button>
                 </div>
 
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-400">
@@ -117,7 +131,10 @@
                             <li class="flex items-center">Publicação na App Store e Google Play</li>
                         </ul>
                     </div>
-                    <a href="{{ route('pages.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
+                    <button type="button" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold open-modal-btn" 
+                    data-service-name="Criação de Aplicações Mobile" data-service-price="7000">
+                        Solicitar
+                    </button>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-400">
                     <div>
@@ -132,7 +149,10 @@
                             <li class="flex items-center">Suporte e Treinamento</li>
                         </ul>
                     </div>
-                    <a href="{{ route('pages.contact') }}" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold">Solicitar</a>
+                    <button type="button" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold open-modal-btn"
+                        data-service-name="Desenvolvimento de Sistemas ERP" data-service-price="40000">
+                        Solicitar
+                    </button>
                 </div>
                 
             </div>
@@ -172,5 +192,6 @@
             <a href="{{ route('pages.contact') }}" class="bg-white text-blue-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg">Obtenha um Orçamento Grátis</a>
         </div>
     </section>
+    @include('components.modal_Form_plans')
     
 @endsection

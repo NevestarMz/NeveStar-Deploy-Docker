@@ -2,107 +2,46 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Message;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
 use App\Models\ChatSession;
+use Illuminate\Http\Request;
 
 
 class AgentController extends Controller
 {
-    // Mostra a view do painel do agente
+    // view do painel do agente
     public function index()
     {
-        return view('agent.index');
+        return view('agent.panel');
     }
 
-    // Lista sessões (session_id) com última mensagem — usado na sidebar
+    // lista sessões abertas
     public function sessions()
     {
-        $sessions = Message::select(
-                'session_id',
-                DB::raw('MAX(created_at) as last_at'),
-                DB::raw('MAX(id) as last_id')
-            )
-            ->groupBy('session_id')
-            ->orderByDesc('last_at')
-            ->get();
-
-        // Para cada sessão, obtem a última mensagem texto e um count de mensagens do usuário não respondidas (opcional)
-        $data = $sessions->map(function($s) {
-            $lastMsg = Message::where('session_id', $s->session_id)
-                              ->orderByDesc('created_at')
-                              ->first(['sender','text','created_at']);
-            return [
-                'session_id' => $s->session_id,
-                'last_at' => $s->last_at,
-                'last_sender' => $lastMsg->sender ?? null,
-                'last_text' => $lastMsg->text ?? null,
-            ];
-        });
-
-        return response()->json(['sessions' => $data]);
+        $sessions = ChatSession::where('status','open')
+            ->withCount('messages')
+            ->with('agent:id,name')
+            ->orderByDesc('updated_at')
+            ->get(['session_key','client_name','agent_id','updated_at']);
+        return response()->json(['sessions'=>$sessions]);
     }
 
-    // Abre uma sessão específica e retorna todas as mensagens dessa sessão
-    public function openSession($sessionId)
+    // abre sessão e retorna histórico
+    public function open($sessionKey)
     {
-        // atribui a sessão ao agente autenticado (se não estiver atribuída ou se já for dele)
-        $agent = Auth::user();
+        $session = ChatSession::where('session_key',$sessionKey)->firstOrFail();
+        // se agente autenticado e sessão sem agent_id, atribui automaticamente
+        if (auth()->check() && ! $session->agent_id) {
+            $session->agent_id = auth()->id();
+            $session->ack_sent = true;
+            $session->save();
 
-        $chatSession = ChatSession::firstOrCreate(
-            ['session_id' => $sessionId],
-            ['ack_sent' => false]
-        );
-
-        if (! $chatSession->agent_id) {
-            $chatSession->agent_id = $agent->id;
-            $chatSession->ack_sent = true;
-            $chatSession->save();
-
-            // opcional: cria mensagem automática assinada informando o cliente
-            Message::create([
-                'session_id' => $sessionId,
-                'sender'     => $agent->name,
-                'text'       => "Olá, sou {$agent->name} e vou assumir esta conversa. — {$agent->name}"
+            $m = $session->messages()->create([
+                'sender_type'=>'agent','sender_name'=>auth()->user()->name,'text'=>"Olá, sou ".auth()->user()->name." e vou assumir esta conversa."
             ]);
+            event(new \App\Events\MessageSent($m));
         }
 
-        $messages = Message::where('session_id', $sessionId)->orderBy('created_at')->get(['sender','text','created_at']);
-        return response()->json(['messages' => $messages]);
-    }
-
-    // Envia uma mensagem como Agente para a sessão especificada
-    public function sendToSession(Request $request, $sessionId)
-    {
-        $text = trim($request->input('message', ''));
-        if ($text === '') {
-            return response()->json(['error' => 'Mensagem vazia'], 422);
-        }
-
-        $agent = auth()->user();
-        $msg = Message::create([
-            'session_id' => $sessionId,
-            'sender'     => $agent->name, // armazena o nome do agente
-            'text'       => $text
-        ]);
-
-        // actualiza chat_session se necessário
-        $chatSession = ChatSession::firstOrCreate(['session_id' => $sessionId]);
-        $chatSession->agent_id = $agent->id;
-        $chatSession->ack_sent = true;
-        $chatSession->save();
-
-        $messages = Message::where('session_id', $sessionId)->orderBy('created_at')->get(['sender','text','created_at']);
-        return response()->json(['messages' => $messages, 'sent' => true, 'message' => $msg]);
-    }
-    // Alterna o estado online do agente
-    public function toggleOnline(Request $request)
-    {
-        $user = auth()->user();
-        $user->is_online = ! $user->is_online;
-        $user->save();
-        return response()->json(['is_online' => $user->is_online]);
+        $messages = $session->messages()->get();
+        return response()->json(['session'=>$session,'messages'=>$messages]);
     }
 }

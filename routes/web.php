@@ -7,12 +7,15 @@ use App\Http\Controllers\LegalController;
 use App\Http\Controllers\ProjectController; 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
-use Illuminate\Support\Facades\Request;
+use App\Events\TestEvent;
+use App\Http\Controllers\ServiceRequestController;
 
 // Aplicação NeveStar Página principal
 Route::get('/', function () {
     return view('welcome');
-})->name('dashboard');    
+})->name('dashboard');
+
+
 
 // Aplicação NeveStar Área de Serviços
 Route::get('/services/software', [UserController::class, 'software'])->name('pages.software');
@@ -25,9 +28,7 @@ Route::get('/orcament/plans', [UserController::class, 'plans'])->name('pages.pla
 Route::get('/about', [UserController::class, 'about'])->name('pages.about');
 Route::get('/contact', [UserController::class, 'contact'])->name('pages.contact');
 
-//  Route::post('/aceitar-cookies', function(Request $request) {
-//     return response('OK')->cookie('cookies_accepted', 'yes', 60*24*30); // 30 dias
-//  });
+ Route::post('/service-requests', [ServiceRequestController::class, 'store']);
 
 // Rotas de Cookies, Termos de Utilização e Privacidade
 Route::get('/termos', [LegalController::class, 'termos'])->name('termos');
@@ -40,23 +41,21 @@ Route::post('/cookies/accept', [LegalController::class, 'acceptCookies'])->name(
 //  Routa de detalhes de Projectos
 Route::get('/projects/{projectId}', [ProjectController::class, 'show'])->name('details.detalhes');
 
-// Routa de Chat
-Route::get('/chat/messages', [ChatController::class, 'messages'])->name('chat.messages');
-Route::get('/chat/mode', [ChatController::class, 'mode'])->name('chat.mode');
-Route::post('/chat/choose', [ChatController::class, 'choose'])->name('chat.choose');
-Route::post('/chat/send', [ChatController::class, 'send'])->name('chat.send');
-Route::post('/chat/clear', [ChatController::class, 'clear'])->name('chat.clear'); // opcional para testes
+// Rota de Teste de Eventos
+// Rotas do Chat
+// Rotas do Chat
+Route::post('/chat/start', [ChatController::class, 'start'])->name('chat.start');
+Route::post('/chat/set-name', [ChatController::class, 'setName'])->name('chat.setName');
+Route::get('/chat/{sessionKey}/history', [ChatController::class, 'history'])->name('chat.history');
+Route::post('/chat/{sessionKey}/send', [ChatController::class, 'clientSend'])->name('chat.clientSend');
+Route::post('/chat/{sessionKey}/send-agent', [ChatController::class, 'agentSend'])->name('chat.agentSend');
 
-// 
-
-// Route::middleware(['auth'])->group(function () {
-    Route::get('/agent', [AgentController::class, 'index'])->name('agent.index');
-    Route::get('/agent/sessions', [AgentController::class, 'sessions'])->name('agent.sessions');
-    Route::get('/agent/session/{sessionId}', [AgentController::class, 'openSession'])->name('agent.session.open');
-    Route::post('/agent/session/{sessionId}/send', [AgentController::class, 'sendToSession'])->name('agent.session.send');
-    Route::post('/agent/toggle-online', [AgentController::class, 'toggleOnline'])->name('agent.toggleOnline');
-
-// });
+// Rotas do Painel do Agente
+Route::middleware('auth')->prefix('agent')->group(function () {
+    Route::get('/', [AgentController::class, 'index'])->name('agent.panel');
+    Route::get('/sessions', [AgentController::class, 'sessions'])->name('agent.sessions');
+    Route::get('/open/{sessionKey}', [AgentController::class, 'open'])->name('agent.open');
+});
 
 
 // Painel Administrativo da Aplicação NeveStar

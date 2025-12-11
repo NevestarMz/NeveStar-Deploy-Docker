@@ -8,14 +8,19 @@
 @section('structured-data')
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "ServiceMobilePage",
+        "@@context": "https://schema.org",
+        "@@type": "ServiceMobilePage",
         "name": "Desenvolvimento Mobile",
         "url": "https://nevestar.co.mz/services/mobile",
         "description": "Crie aplicações móveis de sucesso com a NeveStar. Especialistas em desenvolvimento mobile para Android e iOS, oferecemos soluções personalizadas que impulsionam o seu negócio em Moçambique.",
         "publisher": {
-            "@type": "Organization",
+            "@@type": "Organization",
             "name": "NeveStar"
+            "logo": {
+                "@@type": "ImageObject",
+                // Adicionar o URL do logo é uma boa prática
+                "url": "https://nevestar.co.mz/assets/logo.png"
+            }
         }
     }
     </script>

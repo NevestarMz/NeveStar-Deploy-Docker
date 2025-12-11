@@ -1,5 +1,7 @@
-@import 'tailwindcss';
 @import '@fortawesome/fontawesome-free/css/all.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* @tailwind base;
 @tailwind components;       
@@ -15,6 +17,24 @@
     /* Custom styles for service icons - Placeholder SVGs */
     *{
         font-family: 'Lato', sans-serif;
+    }
+    #contacto {
+        background-image: url('/public/assets/team-member/ci.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #capa {
+        background-image: url('/public/assets/team-member/ti.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #plans {
+        background-image: url('/public/assets/team-member/design.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .service-icon {
         display: inline-block;

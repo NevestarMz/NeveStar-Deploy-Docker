@@ -31,7 +31,7 @@
                     Cookies são pequenos ficheiros de texto armazenados no seu dispositivo quando visita um site. Eles contêm informações que permitem que o site se "lembre" de si e das suas preferências em visitas futuras. O seu uso é uma prática padrão na maioria dos sites profissionais.
                 </p>
                 <p class="mt-4 text-gray-700 leading-relaxed">
-                    Utilizamos também outras tecnologias, como **web beacons**, que são pequenas imagens invisíveis que ajudam a analisar o tráfego do site, e **armazenamento local** (Local Storage) para guardar informações temporárias que melhoram o desempenho.
+                    Utilizamos também outras tecnologias, como web beacons, que são pequenas imagens invisíveis que ajudam a analisar o tráfego do site, e armazenamento local (Local Storage) para guardar informações temporárias que melhoram o desempenho.
                 </p>
             </section>
 
@@ -90,10 +90,10 @@
                         </button>
                         <div id="categories-content" class="accordion-content p-5 hidden text-sm text-gray-600">
                             <ul class="list-disc ml-5 space-y-2">
-                                <li>**Essenciais:** Necessários para as funções básicas do site, como autenticação e processamento de compras. Não podem ser desativados nos nossos sistemas.</li>
-                                <li>**Desempenho e Análise:** Permitem-nos contar visitas e fontes de tráfego, ajudando a melhorar o desempenho do nosso site e a entender as preferências dos nossos clientes.</li>
-                                <li>**Funcionalidade:** Usados para personalizar a sua experiência, como memorizar o seu nome de utilizador ou preferências de idioma e moeda.</li>
-                                <li>**Publicidade:** Permitem-nos criar um perfil dos seus interesses para mostrar anúncios relevantes fora do nosso site.</li>
+                                <li>Essenciais: Necessários para as funções básicas do site, como autenticação e processamento de compras. Não podem ser desativados nos nossos sistemas.</li>
+                                <li>Desempenho e Análise: Permitem-nos contar visitas e fontes de tráfego, ajudando a melhorar o desempenho do nosso site e a entender as preferências dos nossos clientes.</li>
+                                <li>Funcionalidade: Usados para personalizar a sua experiência, como memorizar o seu nome de utilizador ou preferências de idioma e moeda.</li>
+                                <li>Publicidade: Permitem-nos criar um perfil dos seus interesses para mostrar anúncios relevantes fora do nosso site.</li>
                             </ul>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
             <section id="cookies-terceiros">
                 <h2 class="text-3xl font-bold text-gray-900">3. Cookies de Terceiros</h2>
                 <p class="mt-4 text-gray-700 leading-relaxed">
-                    Para otimizar a sua experiência e fornecer serviços adicionais, o nosso site utiliza cookies de terceiros. Estes cookies são instalados por parceiros, como o **Google Analytics** e o **Facebook Pixel**, para nos ajudar a analisar o tráfego, medir a eficácia das campanhas de marketing e exibir anúncios relevantes.
+                    Para otimizar a sua experiência e fornecer serviços adicionais, o nosso site utiliza cookies de terceiros. Estes cookies são instalados por parceiros, como o Google Analytics e o Facebook Pixel, para nos ajudar a analisar o tráfego, medir a eficácia das campanhas de marketing e exibir anúncios relevantes.
                 </p>
             </section>
 
@@ -115,14 +115,10 @@
                     Você pode gerir e revogar o seu consentimento para o uso de cookies a qualquer momento através do nosso painel de preferências.
                 </p>
                 <div class="mt-6 flex flex-col sm:flex-row gap-4">
-                    <button type="button" class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-white font-medium hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+                    <button type="button" id="nv-adjust" class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-white font-medium hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h12v2H3v-2z"/></svg>
                         Abrir Painel de Preferências
                     </button>
-                    <a href="/" class="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-6 py-3 font-medium text-gray-800 shadow-sm hover:bg-gray-50 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M10 19l-7-7 7-7v14zm3-14h2v14h-2V5z"/></svg>
-                        Voltar à página inicial
-                    </a>
                 </div>
                 <p class="mt-6 text-sm text-gray-600">
                     Você também pode gerir as suas preferências diretamente nas definições do seu navegador.

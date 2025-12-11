@@ -13,7 +13,7 @@
     <!-- <title>NeveStar - Soluções Tecnológicas e Inovadoras em Moçambique</title> -->
     
     <meta name="description" content="@yield('meta_description', 'A NeveStar oferece soluções em tecnologia, software e segurança digital em Moçambique.')">
-    <meta name="keywords" content="tecnologia, Inovação, software, Moçambique, segurança digital, desenvolvimento web">
+    <meta name="keywords" content="Nevestar, tecnologia, Inovação, software, Moçambique, segurança digital, desenvolvimento web">
     <meta name="author" content="NeveStar - Inova & Cria">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://nevestar.co.mz/">
@@ -25,7 +25,8 @@
     <meta property="og:site_name" content="NeveStar">
     <meta property="og:type" content="Website">
 
-    @vite(['resources/css/style.css', 'resources/js/app.js'])
+    @vite(['resources/css/style.css', 'resources/css/form_plans.css', 'resources/js/app.js'])
+    <!-- , 'resources/js/chat.js' -->
 
     <!-- O favicon da pagina -->
     <link rel="icon" type="image/png" href="{{ asset('assets/favicon/favicon-96x96.png') }}" sizes="96x96" />
@@ -165,7 +166,7 @@
             </div>
 
             <div class="flex flex-col md:flex-row justify-between items-center pt-8 text-gray-400 text-sm">
-                <p class="mb-2 md:mb-0"> &copy; <span>2025 -</span> <span id="current-year"></span> NeveStar. Todos os direitos reservados. <a href="http://nevestar.co.mz" class="hover:text-blue-400 transition duration-300">NeveStar</a></p>
+                <p class="mb-2 md:mb-0"> &copy; <span>2025 -</span> <span id="current-year"></span> NeveStar. Todos os direitos reservados. <a href="https://nevestar.co.mz" class="hover:text-blue-400 transition duration-300">NeveStar</a></p>
                 <p>Criado com paixão pela tecnologia em Moçambique ❤️</p>
             </div>
         </div>
