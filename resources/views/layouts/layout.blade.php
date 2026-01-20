@@ -26,7 +26,6 @@
     <meta property="og:type" content="Website">
 
     @vite(['resources/css/style.css', 'resources/css/form_plans.css', 'resources/js/app.js'])
-    <!-- , 'resources/js/chat.js' -->
 
     <!-- O favicon da pagina -->
     <link rel="icon" type="image/png" href="{{ asset('assets/favicon/favicon-96x96.png') }}" sizes="96x96" />
@@ -39,8 +38,8 @@
     <link rel="icon" type="image/svg+xml" href="{{ asset('assets/favicon/favicon.svg') }}" />
     <link rel="shortcut icon" href="{{ asset('assets/favicon/favicon.ico') }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}" />
-    <meta name="apple-mobile-web-app-title" content="NeveStar " />
     <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}"/>
+    <meta name="apple-mobile-web-app-title" content="NeveStar" />
 
     {{-- Dados estruturados específicos de cada página --}}
     @yield('structured-data')    
@@ -179,6 +178,7 @@
     @include('components.chat-widget')
 
     @include('layouts.script')
+    <!-- @include('layouts.chatScript') -->
     
 
 </body>

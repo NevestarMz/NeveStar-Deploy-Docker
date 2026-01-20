@@ -16,7 +16,7 @@
         "description": "Conheça a NeveStar: nossa história, missão, valores e a equipa por trás das soluções tecnológicas e inovadoras que impulsionam o seu negócio em Moçambique. Contacte-nos!",
         "publisher": {
             "@@type": "Organization",
-            "name": "NeveStar"
+            "name": "NeveStar",
             "logo": {
                 "@@type": "ImageObject",
                 // Adicionar o URL do logo é uma boa prática

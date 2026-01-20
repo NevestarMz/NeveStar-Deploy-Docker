@@ -15,7 +15,7 @@
         "description": "Crie aplicações móveis de sucesso com a NeveStar. Especialistas em desenvolvimento mobile para Android e iOS, oferecemos soluções personalizadas que impulsionam o seu negócio em Moçambique.",
         "publisher": {
             "@@type": "Organization",
-            "name": "NeveStar"
+            "name": "NeveStar",
             "logo": {
                 "@@type": "ImageObject",
                 // Adicionar o URL do logo é uma boa prática

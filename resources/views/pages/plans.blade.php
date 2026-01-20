@@ -16,7 +16,7 @@
         "description": "Descubra os planos de website da NeveStar, desde soluções básicas a e-commerce premium. Preços competitivos e serviços completos para o seu negócio em Moçambique.",
         "publisher": {
             "@@type": "Organization",
-            "name": "NeveStar" 
+            "name": "NeveStar", 
             "logo": {
                 "@@type": "ImageObject",
                 // Adicionar o URL do logo é uma boa prática

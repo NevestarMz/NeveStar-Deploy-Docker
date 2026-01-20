@@ -15,7 +15,7 @@
         "description": "A NeveStar oferece soluções de desenvolvimento de software personalizadas, desde aplicativos móveis até sistemas web complexos, para impulsionar o seu negócio em Moçambique.",
         "publisher": {
             "@@type": "Organization",
-            "name": "NeveStar"
+            "name": "NeveStar",
             "logo": {
                 "@@type": "ImageObject",
                 // Adicionar o URL do logo é uma boa prática

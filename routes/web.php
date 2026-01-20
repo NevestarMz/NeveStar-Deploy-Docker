@@ -50,6 +50,12 @@ Route::get('/chat/{sessionKey}/history', [ChatController::class, 'history'])->na
 Route::post('/chat/{sessionKey}/send', [ChatController::class, 'clientSend'])->name('chat.clientSend');
 Route::post('/chat/{sessionKey}/send-agent', [ChatController::class, 'agentSend'])->name('chat.agentSend');
 
+// Routa de Chat
+Route::get('/chat/messages', [ChatController::class, 'messages'])->name('chat.messages');
+Route::get('/chat/mode', [ChatController::class, 'mode'])->name('chat.mode');
+Route::post('/chat/choose', [ChatController::class, 'choose'])->name('chat.choose');
+Route::post('/chat/send', [ChatController::class, 'send'])->name('chat.send');
+Route::post('/chat/clear', [ChatController::class, 'clear'])->name('chat.clear'); // opcional para testes
 // Rotas do Painel do Agente
 Route::middleware('auth')->prefix('agent')->group(function () {
     Route::get('/', [AgentController::class, 'index'])->name('agent.panel');

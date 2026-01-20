@@ -16,7 +16,7 @@
     "description": "Entre em contacto com a NeveStar para obter suporte ou solicitar serviços em Moçambique.",
     "publisher": {
         "@@type": "Organization",
-        "name": "NeveStar"
+        "name": "NeveStar",
         "logo": {
             "@@type": "ImageObject",
             // Adicionar o URL do logo é uma boa prática

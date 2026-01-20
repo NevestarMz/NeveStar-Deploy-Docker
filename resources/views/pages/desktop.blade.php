@@ -16,7 +16,7 @@
         "description": "Desenvolvimento de software desktop robusto e personalizado em Moçambique. Otimize seus processos, melhore a produtividade e garanta performance com a NeveStar.",
         "publisher": {
             "@@type": "Organization",
-            "name": "NeveStar"
+            "name": "NeveStar",
             "logo": {
                 "@@type": "ImageObject",
                 // Adicionar o URL do logo é uma boa prática

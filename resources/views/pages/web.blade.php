@@ -16,7 +16,7 @@
         "description": "Criamos websites e sistemas web personalizados que não apenas impressionam, mas também impulsionam o seu negócio, garantindo visibilidade e resultados no mercado moçambicano.",
         "publisher": {
             "@@type": "Organization",
-            "name": "NeveStar"
+            "name": "NeveStar",
             "logo": {
                 "@@type": "ImageObject",
                 // Adicionar o URL do logo é uma boa prática
