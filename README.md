@@ -239,7 +239,7 @@ docker ps
 
 Acessar o bash do container.
 ```
-docker exec -it nevestar-deploy-docker-laravel.test-1 bash
+docker exec -it nevestar-deploy-docker-laravel.test-1 bash 
 ```
 
 Alterar o proprietário dos arquivos.

@@ -1,4 +1,5 @@
 services:
+    # O container principal da aplicação
     laravel.test:
         build:
             context: './vendor/laravel/sail/runtimes/8.4'
@@ -6,10 +7,11 @@ services:
             args:
                 WWWGROUP: '${WWWGROUP}'
         image: sail-8.4/app
+        restart: unless-stopped # Garante que o site volte se o VPS reiniciar
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
-            - '${APP_PORT:-80}:80'
+            - '${APP_PORT:-80}:80' # Padrão para porta 80 em produção
             - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
         environment:
             WWWUSER: '${WWWUSER}'
@@ -22,9 +24,18 @@ services:
         networks:
             - sail
         depends_on:
-            - mysql
+            mysql:
+                condition: service_healthy
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+                max-file: "3"
+
+    # Banco de Dados
     mysql:
         image: 'mysql/mysql-server:8.0'
+        restart: unless-stopped
         ports:
             - '${FORWARD_DB_PORT:-3306}:3306'
         environment:
@@ -34,34 +45,46 @@ services:
             MYSQL_USER: '${DB_USERNAME}'
             MYSQL_PASSWORD: '${DB_PASSWORD}'
             MYSQL_ALLOW_EMPTY_PASSWORD: 1
-            MYSQL_EXTRA_OPTIONS: '${MYSQL_EXTRA_OPTIONS}'
+            MYSQL_EXTRA_OPTIONS: '--default-authentication-plugin=mysql_native_password'
         volumes:
             - 'sail-mysql:/var/lib/mysql'
             - './vendor/laravel/sail/database/mysql/create-testing-database.sh:/docker-entrypoint-initdb.d/10-create-testing-database.sh'
         networks:
             - sail
         healthcheck:
-            test:
-                - CMD
-                - mysqladmin
-                - ping
-                - '-p${DB_PASSWORD}'
+            test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
             retries: 3
             timeout: 5s
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+
+    # Laravel Reverb (Websockets)
     reverb:
-        image: laravelsail/php83-composer
+        image: sail-8.4/app # Reutiliza a imagem do app (já tem PHP 8.4 e extensões)
+        restart: unless-stopped
         working_dir: /var/www/html
         command: php artisan reverb:start --host=0.0.0.0 --port=8080
         ports:
-        - "8080:8080"
+            - "${REVERB_PORT:-8080}:8080"
+        environment:
+            LARAVEL_SAIL: 1
         volumes:
-        - ./:/var/www/html
+            - ./:/var/www/html
+        networks:
+            - sail
         depends_on:
-        - laravel.test
+            - laravel.test
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
 
 networks:
     sail:
         driver: bridge
+
 volumes:
     sail-mysql:
         driver: local
