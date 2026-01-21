@@ -143,7 +143,7 @@
                     <h3 class="text-xl font-semibold mb-4">Contacto</h3>
                     <p class="text-gray-400 mb-2">Email: <a href="mailto:nevestar@nevestar.co.mz">nevestar@nevestar.co.mz</a></p>
                     <p class="text-gray-400 mb-2">Telefone: <a href="tel:+258850492263">+258 85 049 2263</a></p>
-                    <p class="text-gray-400 mb-4">Localização: <strong>Maxixe, Moçambique</strong></p>
+                    <p class="text-gray-400 mb-4">Localização: <strong>Maputo, Moçambique</strong></p>
                     <div class="flex justify-center md:justify-start space-x-3">
                         <a href="https://youtube.com/@nevestars?si=9cW_0RseerSnRS9W" class="social-icon bg-[#FFFF]" aria-label="Youtube">
                             <i class="fab fa-youtube text-[#FF0000] text-2xl"></i>

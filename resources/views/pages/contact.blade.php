@@ -71,10 +71,10 @@
                         <h3 class="text-2xl font-semibold text-gray-900 mb-3">Localização</h3>
                         <p class="text-gray-700 mb-4">Visite-nos em nosso escritório principal em Agostinho Neto - Maxixe, Moçambique.</p>
                         <address class="not-italic text-gray-700 mb-2">
-                            EN. 6, Nhaguiviga, 3ª Rua<br>
-                            Inhambane, Maxixe, Moçambique
+                            Av. 4 de outubro, Rua Teodoro Gonçalves de Silva, <br>
+                            Benfica - Maputo, Moçambique
                         </address>
-                        <a href="https://www.google.com/maps/place/NeveStar/@-24.0355304,35.2790363,17z/data=!3m1!4b1!4m6!3m5!1s0x1f21d55c48166309:0xfa8c8ab1baa60467!8m2!3d-24.0355353!4d35.2816166!16s%2Fg%2F11xkdrzn7y!5m2!1e2!1e4?entry=ttu&g_ep=EgoyMDI1MDYwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-blue-600 hover:underline font-medium text-lg flex items-center">
+                        <a href="https://maps.app.goo.gl/FF8d7PdBAatN6ypS7" target="_blank" class="text-blue-600 hover:underline font-medium text-lg flex items-center">
                             <i class="fas fa-route mr-2"></i> Ver no Mapa
                         </a>
                     </div>
@@ -162,7 +162,7 @@
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Onde Nos Encontrar</h2>
             <div class="bg-white rounded-lg shadow-lg overflow-hidden h-96">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29150.933821364997!2d35.24463419999999!3d-24.0357644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1f21d55c48166309%3A0xfa8c8ab1baa60467!2sNeveStar!5e0!3m2!1spt-PT!2smz!4v1749677661534!5m2!1spt-PT!2smz" 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.453071597061!2d32.56054869999999!3d-25.8874724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee691db49e1c555%3A0x32abc59f44618e8f!2sNevestar!5e0!3m2!1spt-PT!2smz!4v1768976253731!5m2!1spt-PT!2smz" 
                     width="100%" 
                     height="100%" 
                     style="border:0;" 

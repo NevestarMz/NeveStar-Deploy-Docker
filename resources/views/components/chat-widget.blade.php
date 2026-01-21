@@ -1,5 +1,5 @@
 <!-- components/chat-widget.blade.php -->
-<div id="chat-root" aria-hidden="false">
+<div id="chat-root z-index" aria-hidden="false">
   <div class="fixed bottom-4 right-4 z-50">
     <button id="chatButton" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-full shadow-lg flex items-center gap-2">
       <i class="fas fa-headset"></i> Ajuda
