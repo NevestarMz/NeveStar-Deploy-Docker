@@ -7,22 +7,21 @@
 
 @section('structured-data')
     <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@type": "ServiceSoftwarePage",
-        "name": "Desenvolvimento de Software ERP e Institucional",
-        "url": "https://nevestar.co.mz/services/software",
-        "description": "A NeveStar oferece soluções de desenvolvimento de software personalizadas, desde aplicativos móveis até sistemas web complexos, para impulsionar o seu negócio em Moçambique.",
-        "publisher": {
-            "@@type": "Organization",
-            "name": "NeveStar",
-            "logo": {
-                "@@type": "ImageObject",
-                // Adicionar o URL do logo é uma boa prática
-                "url": "https://nevestar.co.mz/assets/logo.png"
+        {
+            "@@context": "https://schema.org",
+            "@@type": "ServiceSoftwarePage",
+            "name": "Desenvolvimento de Software ERP e Institucional",
+            "url": "https://nevestar.co.mz/services/software",
+            "description": "A NeveStar oferece soluções de desenvolvimento de software personalizadas, desde aplicativos móveis até sistemas web complexos, para impulsionar o seu negócio em Moçambique.",
+            "publisher": {
+                "@@type": "Organization",
+                "name": "NeveStar",
+                "logo": {
+                    "@@type": "ImageObject",
+                    "url": "https://nevestar.co.mz/assets/logo.png"
+                }
             }
         }
-    }
     </script>
 @endsection
 

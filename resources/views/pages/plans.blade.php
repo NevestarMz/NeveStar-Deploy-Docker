@@ -8,22 +8,21 @@
 
 @section('structured-data')
     <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@type": "PlansPage",
-        "name": "Planos de Serviços",
-        "url": "https://nevestar.co.mz/orcament/plans",
-        "description": "Descubra os planos de website da NeveStar, desde soluções básicas a e-commerce premium. Preços competitivos e serviços completos para o seu negócio em Moçambique.",
-        "publisher": {
-            "@@type": "Organization",
-            "name": "NeveStar", 
-            "logo": {
-                "@@type": "ImageObject",
-                // Adicionar o URL do logo é uma boa prática
-                "url": "https://nevestar.co.mz/assets/logo.png"
+        {
+            "@@context": "https://schema.org",
+            "@@type": "PlansPage",
+            "name": "Planos de Serviços",
+            "url": "https://nevestar.co.mz/orcament/plans",
+            "description": "Descubra os planos de website da NeveStar, desde soluções básicas a e-commerce premium. Preços competitivos e serviços completos para o seu negócio em Moçambique.",
+            "publisher": {
+                "@@type": "Organization",
+                "name": "NeveStar", 
+                "logo": {
+                    "@@type": "ImageObject",
+                    "url": "https://nevestar.co.mz/assets/logo.png"
+                }
             }
         }
-    }
     </script>
 @endsection
 

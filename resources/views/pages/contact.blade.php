@@ -8,22 +8,21 @@
 
 @section('structured-data')
 <script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@@type": "ContactPage",
-    "name": "Contacte-nos",
-    "url": "https://nevestar.co.mz/contact",
-    "description": "Entre em contacto com a NeveStar para obter suporte ou solicitar serviços em Moçambique.",
-    "publisher": {
-        "@@type": "Organization",
-        "name": "NeveStar",
-        "logo": {
-            "@@type": "ImageObject",
-            // Adicionar o URL do logo é uma boa prática
-            "url": "https://nevestar.co.mz/assets/logo.png"
+    {
+        "@@context": "https://schema.org",
+        "@@type": "ContactPage",
+        "name": "Contacte-nos",
+        "url": "https://nevestar.co.mz/contact",
+        "description": "Entre em contacto com a NeveStar para obter suporte ou solicitar serviços em Moçambique.",
+        "publisher": {
+            "@@type": "Organization",
+            "name": "NeveStar",
+            "logo": {
+                "@@type": "ImageObject",
+                "url": "https://nevestar.co.mz/assets/logo.png"
+            }
         }
     }
-}
 </script>
 @endsection
 

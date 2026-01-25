@@ -8,22 +8,21 @@
 
 @section('structured-data')
     <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@type": "ServiceDasktopPage",
-        "name": "Serviços de Desenvolvimento Desktop",
-        "url": "https://nevestar.co.mz/services/desktop",
-        "description": "Desenvolvimento de software desktop robusto e personalizado em Moçambique. Otimize seus processos, melhore a produtividade e garanta performance com a NeveStar.",
-        "publisher": {
-            "@@type": "Organization",
-            "name": "NeveStar",
-            "logo": {
-                "@@type": "ImageObject",
-                // Adicionar o URL do logo é uma boa prática
-                "url": "https://nevestar.co.mz/assets/logo.png"
+        {
+            "@@context": "https://schema.org",
+            "@@type": "ServiceDasktopPage",
+            "name": "Serviços de Desenvolvimento Desktop",
+            "url": "https://nevestar.co.mz/services/desktop",
+            "description": "Desenvolvimento de software desktop robusto e personalizado em Moçambique. Otimize seus processos, melhore a produtividade e garanta performance com a NeveStar.",
+            "publisher": {
+                "@@type": "Organization",
+                "name": "NeveStar",
+                "logo": {
+                    "@@type": "ImageObject",
+                    "url": "https://nevestar.co.mz/assets/logo.png"
+                }
             }
         }
-    }
     </script>
 @endsection
 

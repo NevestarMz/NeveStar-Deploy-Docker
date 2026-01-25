@@ -19,7 +19,6 @@
             "name": "NeveStar",
             "logo": {
                 "@@type": "ImageObject",
-                // Adicionar o URL do logo é uma boa prática
                 "url": "https://nevestar.co.mz/assets/logo.png"
             }
         }
