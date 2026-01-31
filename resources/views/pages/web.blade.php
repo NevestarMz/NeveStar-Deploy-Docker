@@ -29,9 +29,12 @@
 @section('content')
 
 
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center">
-        <div class="container mx-auto px-6 flex flex-col items-center">
-            <i class="fas fa-globe web-hero-icon text-6xl"></i>
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden text-white py-24 md:py-40 text-center">
+        <div id="web" class="absolute inset-0 z-0"> 
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-700/90 via-blue-700/80 to-blue-800/70"></div>
+        </div>
+        <div class="container relative mx-auto px-4 flex flex-col items-center">
+            <!-- <i class="fas fa-globe web-hero-icon text-6xl"></i> -->
             <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">Desenvolvimento Web - Sua Presença Online de Sucesso em Moçambique</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Criamos websites e sistemas web personalizados que não apenas impressionam, mas também impulsionam o seu negócio, garantindo visibilidade e resultados no mercado moçambicano.
@@ -79,32 +82,46 @@
         <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16 text-center">Nossas Especialidades e Abordagens em Desenvolvimento Web</h2>
             <div class="max-w-5xl mx-auto custom-bullet-list text-xl text-gray-700">
-                <li>
-                    <i class="fas fa-building icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-building text-lg"></i>
+                    </div>
                     <p><strong>Websites Institucionais e Corporativos de Ponta:</strong> Criamos uma presença online que reflete a essência da sua marca, com design profissional, navegação intuitiva e conteúdo otimizado para transmitir credibilidade e captar a atenção do seu público.</p>
                 </li>
-                <li>
-                    <i class="fas fa-shopping-cart icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-cart-shopping text-lg"></i>
+                    </div>
                     <p><strong>Plataformas de E-commerce e Lojas Online Seguras:</strong> Desenvolvemos lojas virtuais completas e seguras, com sistemas de pagamento integrados (incluindo opções de contas móveis locais, como o M-Pesa e E-Mola), gestão de stock, carrinho de compras e uma experiência de usuário fluida para maximizar as suas vendas.</p>
                 </li>
-                <li>
-                    <i class="fas fa-cogs icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-violet-600 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-gears text-lg"></i>
+                    </div>
                     <p><strong>Sistemas Web Personalizados (CRM, ERP, Portais):</strong> Criamos soluções web à medida para as suas necessidades específicas, como sistemas de gestão de clientes (CRM), planeamento de recursos empresariais (ERP) ou portais colaborativos. Automatize processos, aumente a produtividade e otimize a gestão interna da sua empresa.</p>
                 </li>
-                <li>
-                    <i class="fas fa-blog icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-sky-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-blog text-lg"></i>
+                    </div>
                     <p><strong>Blogs e Portais de Conteúdo Dinâmicos:</strong> Para empresas que desejam estabelecer autoridade e engajamento através de conteúdo relevante, desenvolvemos plataformas de blog e portais de notícias fáceis de gerir, com funcionalidades de partilha e otimização para leitores.</p>
                 </li>
-                <li>
-                    <i class="fas fa-chart-bar icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-orange-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-magnifying-glass-chart text-lg"></i>
+                    </div>
                     <p><strong>Otimização para Motores de Busca (SEO):</strong> A sua visibilidade é crucial. Integramos as melhores práticas de SEO desde o início do desenvolvimento, garantindo que o seu website seja bem posicionado no Google e outros motores de busca, atraindo tráfego qualificado organicamente.</p>
                 </li>
-                <li>
-                    <i class="fas fa-mobile-alt icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-pink-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-mobile-alt text-lg"></i>
+                    </div>
                     <p><strong>Design Responsivo para Todos os Dispositivos:</strong> Garantimos que o seu website oferece uma experiência impecável em qualquer ecrã, seja um desktop, tablet ou smartphone. Um design responsivo é fundamental para o alcance e a satisfação do utilizador.</p>
                 </li>
-                <li>
-                    <i class="fas fa-server icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-slate-700 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-database text-lg"></i>
+                    </div>
                     <p><strong>Backend Robusto e Tecnologias Modernas:</strong> Utilizamos as tecnologias mais recentes e seguras para o desenvolvimento do backend do seu website, garantindo alta performance, escalabilidade e segurança dos dados.</p>
                 </li>
             </div>

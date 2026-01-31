@@ -26,9 +26,12 @@
 @endsection
 
 @section('content') 
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center">
-        <div class="container mx-auto px-6 flex flex-col items-center">
-            <i class="fas fa-server erp-hero-icon text-6xl"></i> 
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden text-white py-24 md:py-40 text-center">
+        <div id="software" class="absolute inset-0 z-0"> 
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-700/65 via-blue-700/55 to-blue-800/45"></div>
+        </div>
+        <div class="container relative mx-auto px-4 flex flex-col items-center">
+            <!-- <i class="fas fa-server erp-hero-icon text-6xl"></i>  -->
             <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">Sistemas de Gestão Empresarial (ERP) - O Coração da Sua Eficiência em Moçambique</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Transforme a gestão do seu negócio com soluções ERP personalizadas e robustas, integrando todos os departamentos para uma operação mais inteligente e rentável.
@@ -76,36 +79,55 @@
         <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16 text-center">Módulos Essenciais e Customizações da NeveStar em ERP</h2>
             <div class="max-w-5xl mx-auto custom-bullet-list text-xl text-gray-700">
-                <li>
-                    <i class="fas fa-chart-area icon"></i>
-                    <p><strong>Gestão Financeira e Contabilidade:</strong> Controle completo de contas a pagar e a receber, fluxo de caixa, contabilidade geral, ativos fixos, orçamentação e relatórios financeiros detalhados para uma saúde financeira robusta.</p>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-blue-700 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-chart-line text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900">Gestão Financeira e Contabilidade:</h4>
+                        <p class="text-gray-600">Controle completo de contas a pagar e a receber, fluxo de caixa, contabilidade geral, ativos fixos e relatórios detalhados.</p>
+                    </div>
                 </li>
-                <li>
-                    <i class="fas fa-warehouse icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-600 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-warehouse text-lg"></i>
+                    </div>
                     <p><strong>Gestão de Estoque e Compras:</strong> Otimização de níveis de estoque, controle de inventário, automação de pedidos de compra, gestão de fornecedores e previsão de demanda para evitar rupturas e excessos.</p>
                 </li>
-                <li>
-                    <i class="fas fa-truck-loading icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-truck-fast text-lg"></i>
+                    </div>
                     <p><strong>Logística e Cadeia de Suprimentos (SCM):</strong> Planeamento de produção, gestão de transporte, rastreamento de mercadorias e otimização de rotas para uma cadeia de suprimentos eficiente e responsiva.</p>
                 </li>
-                <li>
-                    <i class="fas fa-users icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-emerald-600 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-users text-lg"></i>
+                    </div>
                     <p><strong>Gestão de Recursos Humanos (RH):</strong> Folha de pagamento, gestão de talentos, recrutamento, onboarding, gestão de desempenho e desenvolvimento de pessoal, tudo em um só lugar.</p>
                 </li>
-                <li>
-                    <i class="fas fa-handshake icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-violet-600 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-handshake text-lg"></i>
+                    </div>
                     <p><strong>Gestão de Relacionamento com o Cliente (CRM):</strong> Centralize informações de clientes, otimize processos de vendas, marketing e atendimento, e construa relacionamentos duradouros que impulsionam o crescimento.</p>
                 </li>
-                <li>
-                    <i class="fas fa-project-diagram icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-amber-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-diagram-project text-lg"></i>
+                    </div>
                     <p><strong>Gestão de Projetos:</strong> Planeamento, execução, monitoramento e controle de projetos, com acompanhamento de prazos, recursos e custos, garantindo a entrega no tempo e no orçamento.</p>
                 </li>
-                <li>
-                    <i class="fas fa-industry icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-slate-600 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-industry text-lg"></i>
+                    </div>
                     <p><strong>Gestão de Produção e Manufatura:</strong> Otimização de processos de produção, planeamento de capacidade, controle de qualidade e gestão de ordens de fabricação para indústrias de todos os portes.</p>
                 </li>
-                <li>
-                    <i class="fas fa-shield-alt icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-rose-600 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-shield-halved text-lg"></i>
+                    </div>
                     <p><strong>Segurança e Conformidade de Dados:</strong> Implementamos as melhores práticas de segurança de dados e garantimos que o seu sistema ERP esteja em conformidade com as regulamentações locais e internacionais.</p>
                 </li>
             </div>

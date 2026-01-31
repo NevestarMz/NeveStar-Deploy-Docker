@@ -28,7 +28,7 @@
         <div id="capa" class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/65 via-blue-600/55 to-blue-700/45"></div>
         </div>
-        <div class="container relative z-10 mx-auto px-4 flex flex-col items-center">
+        <div class="container relative mx-auto px-4 flex flex-col items-center">
             <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">NeveStar - Inovação Tecnológica à Sua Medida em Moçambique</h1>
             <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
                 Desenvolvemos soluções de software de ponta para dispositivos Mobile, páginas Web, programas Desktop e Sistemas de Gestão Empresarial, impulsionando o seu sucesso.
@@ -76,7 +76,7 @@
         <div id="plans" class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/65 via-blue-600/55 to-blue-700/45"></div>
         </div>
-        <div class="container relative z-10 mx-auto px-4 text-center">
+        <div class="container relative mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 animate-fade-in-up">Nossos Planos de Websites</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between card-hover-effect animate-fade-in-up delay-100">
@@ -186,7 +186,7 @@
         <div id="contacto" class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/65 via-blue-600/55 to-blue-700/45"></div>
         </div>
-        <div class="container relative z-10 mx-auto px-4 flex flex-col items-center">
+        <div class="container relative mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Transforme sua ideia em realidade com a NeveStar</h2>
             <p class="text-lg mb-8 max-w-2xl mx-auto">
                 Entre em contacto hoje mesmo e descubra como a nossa tecnologia pode impulsionar o seu negócio em Moçambique.

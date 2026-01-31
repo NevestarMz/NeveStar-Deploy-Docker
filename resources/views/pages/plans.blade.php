@@ -28,8 +28,11 @@
 
 @section('content')
 
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 md:py-32 text-center">
-        <div class="container mx-auto px-4">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden text-white py-20 md:py-32 text-center">
+        <div id="planpage" class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-800/75 via-black-700/55 to-blue-800/65"></div>
+        </div>
+        <div class="container relative mx-auto px-4 flex flex-col items-center">
             <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">Nossos Planos de Websites - Escolha a Sua Estrela Digital</h1>
             <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
                 Oferecemos soluções de websites flexíveis e acessíveis para todas as necessidades, desde presença online básica até e-commerce completo.

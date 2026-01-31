@@ -1,12 +1,12 @@
 <!-- components/chat-widget.blade.php -->
-<div id="chat-root z-index" aria-hidden="false">
-  <div class="fixed bottom-4 right-4 z-50">
+<div id="chat-root" class="z-[9999]" aria-hidden="false">
+  <div class="fixed bottom-4 right-4 z-[9999]">
     <button id="chatButton" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-full shadow-lg flex items-center gap-2">
       <i class="fas fa-headset"></i> Ajuda
     </button>
   </div>
 
-  <div id="chatWindow" class="hidden fixed bottom-16 right-4 w-full max-w-xs sm:w-96 bg-white rounded-xl shadow-2xl border border-gray-200 flex flex-col h-[470px] overflow-hidden">
+  <div id="chatWindow" class="hidden z-[9999] fixed bottom-16 right-4 w-full max-w-xs sm:w-96 bg-white rounded-xl shadow-2xl border border-gray-200 flex flex-col h-[470px] overflow-hidden">
     <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-3 flex items-center justify-between flex-shrink-0">
       <div class="flex items-center gap-3">
         <div class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center">
@@ -28,7 +28,7 @@
     </div>
 
     <div class="p-3 border-t bg-white flex gap-2">
-      <input id="messageInput" type="text" placeholder="Escreva uma mensagem..." class="flex-1 border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <input id="messageInput" type="text" placeholder="Escreva uma mensagem..." class="flex-1 border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       <button id="sendButton" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Enviar</button>
     </div>
   </div>

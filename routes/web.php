@@ -7,7 +7,6 @@ use App\Http\Controllers\LegalController;
 use App\Http\Controllers\ProjectController; 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
-use App\Events\TestEvent;
 use App\Http\Controllers\ServiceRequestController;
 
 // Aplicação NeveStar Página principal

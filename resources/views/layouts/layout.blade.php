@@ -53,7 +53,7 @@
             <img src="{{ asset('assets/logo.png') }}" class="h-full object-cover" alt="Logo">
         </a>
 
-        <nav class="hidden md:flex space-x-6">
+        <nav class="hidden md:flex space-x-6 text-xl">
             <a href="{{ route('dashboard') }}" class="{{ request()->routeIs('dashboard') ? 'text-blue-500 font-bold' : 'hover:text-blue-500' }}">Início</a>
 
             @php
@@ -178,7 +178,6 @@
     @include('components.chat-widget')
 
     @include('layouts.script')
-    <!-- @include('layouts.chatScript') -->
     
 
 </body>

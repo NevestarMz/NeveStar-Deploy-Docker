@@ -26,6 +26,48 @@
         background-position: center;
         background-repeat: no-repeat;
     }
+    #planpage {
+        background-image: url('/public/assets/background/plan.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #about {
+        background-image: url('/public/assets/background/sobre.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #contact {
+        background-image: url('/public/assets/background/contact.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #software {
+        background-image: url('/public/assets/background/software.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #mobile {
+        background-image: url('/public/assets/background/mobile.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #web {
+        background-image: url('/public/assets/background/web-design-4875186_1920.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #desktop {
+        background-image: url('/public/assets/background/desktop.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
     #plans {
         background-image: url('/public/assets/team-member/design.jpg');
         background-size: cover;
@@ -200,6 +242,13 @@
     .custom-bullet-list li .icon {
         font-size: 1.5rem;
         color: rgba(37,99,235,1);
+        margin-right: 1rem;
+        flex-shrink: 0;
+        margin-top: 0.25rem; /* Ajuste fino */
+    }
+    .custom-bullet-list li .icon1 {
+        font-size: 1.5rem;
+        color: pink;
         margin-right: 1rem;
         flex-shrink: 0;
         margin-top: 0.25rem; /* Ajuste fino */

@@ -28,9 +28,12 @@
 
 @section('content')
 
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center">
-        <div class="container mx-auto px-6 flex flex-col items-center">
-            <i class="fas fa-desktop desktop-hero-icon text-6xl"></i>
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden text-white py-24 md:py-40 text-center">
+        <div id="desktop" class="absolute inset-0 z-0"> 
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-700/75 via-blue-700/65 to-blue-800/55"></div>
+        </div>
+        <div class="container relative mx-auto px-4 flex flex-col items-center">
+            <!-- <i class="fas fa-desktop desktop-hero-icon text-6xl"></i> -->
             <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">Desenvolvimento Desktop - Poder e Performance ao Seu Alcance</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Crie soluções de software desktop personalizadas e robustas para otimizar operações internas, aumentar a produtividade e garantir segurança em Moçambique.
@@ -78,28 +81,40 @@
         <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16 text-center">Nossas Abordagens e Metodologia em Desenvolvimento Desktop</h2>
             <div class="max-w-5xl mx-auto custom-bullet-list text-xl text-gray-700">
-                <li>
-                    <i class="fas fa-desktop icon"></i> {{-- Ícone adaptado --}}
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-desktop text-lg"></i>
+                    </div>
                     <p><strong>Design Robusto de Interface:</strong> Criamos interfaces de utilizador (UI) desktop que são não só visualmente apelativas, mas também altamente funcionais e intuitivas, otimizadas para fluxos de trabalho complexos e uso prolongado.</p>
                 </li>
-                <li>
-                    <i class="fas fa-database icon"></i> {{-- Ícone adaptado --}}
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-database text-lg"></i>
+                    </div>
                     <p><strong>Integração de Base de Dados:</strong> Desenvolvemos e integramos bases de dados locais ou distribuídas para garantir que sua aplicação desktop gerencia e armazena dados de forma eficiente e segura, essencial para sistemas de gestão.</p>
                 </li>
-                <li>
-                    <i class="fas fa-microchip icon"></i> {{-- Ícone adaptado --}}
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-microchip text-lg"></i>
+                    </div>
                     <p><strong>Otimização de Performance:</strong> Focamos na otimização de código e recursos para garantir que sua aplicação desktop execute rapidamente, mesmo com grandes volumes de dados ou tarefas computacionalmente intensivas.</p>
                 </li>
-                <li>
-                    <i class="fas fa-network-wired icon"></i> {{-- Ícone adaptado --}}
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-green-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-database text-lg"></i>
+                    </div>
                     <p><strong>Integração com Sistemas Existentes:</strong> Nossas soluções desktop são projetadas para se integrarem perfeitamente com seu hardware, periféricos e outros softwares existentes, proporcionando um ecossistema tecnológico coeso.</p>
                 </li>
-                <li>
-                    <i class="fas fa-lock icon"></i> {{-- Ícone adaptado --}}
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-purple-600 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-microchip text-lg"></i>
+                    </div>
                     <p><strong>Segurança e Confiabilidade:</strong> Implementamos medidas de segurança avançadas para proteger seus dados e garantir que a aplicação desktop seja resiliente a falhas e acessos não autorizados.</p>
                 </li>
-                <li>
-                    <i class="fas fa-wrench icon"></i> {{-- Ícone adaptado --}}
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-teal-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-network-wired text-lg"></i>
+                    </div>
                     <p><strong>Implantação e Manutenção Simplificadas:</strong> Oferecemos apoio completo na implantação da aplicação em sua infraestrutura e garantimos suporte e atualizações contínuas para a longevidade e performance do software.</p>
                 </li>
             </div>

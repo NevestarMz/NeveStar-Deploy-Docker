@@ -28,9 +28,12 @@
 
 @section('content')
 
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center">
-        <div class="container mx-auto px-6 flex flex-col items-center">
-            <i class="fas fa-users-gear about-hero-icon text-6xl"></i> {{-- Ícone representativo para 'Sobre Nós' --}}
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden text-white py-24 md:py-40 text-center">
+        <div id="about" class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-700/95 via-black-700/85 to-blue-800/75"></div>
+        </div>
+        <div class="container relative z-10 mx-auto px-4 flex flex-col items-center">
+            <!-- <i class="fas fa-users-gear about-hero-icon text-6xl"></i> {{-- Ícone representativo para 'Sobre Nós' --}} -->
             <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">Sobre a NeveStar - Construindo o Futuro Digital de Moçambique</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Descubra a história, a paixão e o compromisso da nossa equipa em transformar ideias em soluções tecnológicas inovadoras para empresas e indivíduos em Moçambique.
@@ -80,7 +83,7 @@
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col items-center card-hover-effect">
-                    <img src="{{ asset('assets/team-member/rivaldo_perfil.png') }}" alt="Nome do Membro 1" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600">
+                    <img src="{{ asset('assets/team-member/rivaldo_perfil.png') }}" alt="Rivaldo" class="team-photo w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600 cursor-pointer hover:opacity-90 transition">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Rivaldo António</h3>
                     <p class="text-blue-600 font-medium mb-3">CEO & Desenvolvedor de Software</p>
                     <p class="text-gray-700 text-center">Com mais de 3 anos de experiência, Rivaldo lidera a visão estratégica e arquitetura as soluções da NeveStar.</p>
@@ -89,8 +92,9 @@
                         <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-github text-xl"></i></a>
                     </div>
                 </div>
+                
                 <div class="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col items-center card-hover-effect">
-                    <img src="{{ asset('assets/team-member/design.jpg') }}" alt="Nome do Membro 2" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600">
+                    <img src="{{ asset('assets/team-member/design.jpg') }}" alt="Carlos" class="team-photo w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600 cursor-pointer hover:opacity-90 transition">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Carlos Mendes</h3>
                     <p class="text-blue-600 font-medium mb-3">Lead UX/UI Designer</p>
                     <p class="text-gray-700 text-center">Jonas garante que todas as nossas interfaces sejam intuitivas, bonitas e proporcionem a melhor experiência ao utilizador.</p>
@@ -99,8 +103,9 @@
                         <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-behance text-xl"></i></a>
                     </div>
                 </div>
+
                 <div class="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col items-center card-hover-effect">
-                    <img src="{{ asset('assets/team-member/dev.jpeg') }}" alt="Nome do Membro 3" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600">
+                    <img src="{{ asset('assets/team-member/dev.jpeg') }}" alt="Jonas" class="team-photo w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600 cursor-pointer hover:opacity-90 transition">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Jonas Bento</h3>
                     <p class="text-blue-600 font-medium mb-3">Especialista em Desenvolvimento Software Mobile</p>
                     <p class="text-gray-700 text-center">Carlos é o nosso guru em mobile, transformando ideias complexas em aplicações móveis fluidas e de alta performance.</p>
@@ -109,8 +114,9 @@
                         <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-twitter text-xl"></i></a>
                     </div>
                 </div>
+
                 <div class="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col items-center card-hover-effect">
-                    <img src="{{ asset('assets/team-member/especialista.jpg') }}" alt="Nome do Membro 3" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600">
+                    <img src="{{ asset('assets/team-member/especialista.jpg') }}" alt="Pedro" class="team-photo w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-600 cursor-pointer hover:opacity-90 transition">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Pedro João</h3>
                     <p class="text-blue-600 font-medium mb-3">Especialista em Desenvolvimento Web</p>
                     <p class="text-gray-700 text-center">Pedro é o nosso cabeça em desenvolvimento Web, transformando ideias complexas em aplicações Web parudas e de alta performance.</p>
@@ -119,11 +125,14 @@
                         <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-twitter text-xl"></i></a>
                     </div>
                 </div>
-                {{-- Adicione mais membros da equipa conforme necessário --}}
             </div>
         </div>
     </section>
 
+    <div id="photo-viewer" class="fixed inset-0 z-[10000] hidden items-center justify-center bg-black/95 p-4 backdrop-blur-sm">
+        <button id="close-viewer" class="absolute top-5 right-8 text-white text-6xl font-light hover:text-blue-500 transition-colors">&times;</button>
+        <img id="viewer-img" src="" class="max-w-full max-h-[90vh] rounded shadow-2xl transform transition-all duration-300 scale-95 opacity-0">
+    </div>
     <section class="py-16 md:py-24 bg-blue-100 animated-section">
         <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 animate-fade-in-up">Nossos Valores Fundamentais</h2>
@@ -164,5 +173,52 @@
             <a href="{{ route('pages.contact') }}" class="bg-white text-blue-800 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg animate-zoom-in delay-300">Entre em Contacto Agora</a>
         </div>
     </section>
+
+    <script>
+        (function() {
+            // 1. Selecionar os elementos uma única vez
+            const modal = document.getElementById('photo-viewer');
+            const modalImg = document.getElementById('viewer-img');
+            const closeBtn = document.getElementById('close-viewer');
+
+            if (!modal || !modalImg) return;
+
+            // 2. Ouvir cliques em QUALQUER lugar da página
+            document.addEventListener('click', function(e) {
+                // Se o elemento clicado tiver a classe 'team-photo'
+                console.log(e.target);
+                if (e.target.classList.contains('team-photo')) {
+                    modalImg.src = e.target.src;
+                    
+                    // Mostrar o modal
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    
+                    // Trigger da animação suave
+                    setTimeout(() => {
+                        modalImg.classList.remove('scale-95', 'opacity-0');
+                        modalImg.classList.add('scale-100', 'opacity-100');
+                    }, 50);
+                    
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+
+            // 3. Função para fechar
+            const closeModal = () => {
+                modalImg.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    document.body.style.overflow = 'auto';
+                }, 300);
+            };
+
+            // 4. Atalhos para fechar (Botão, Fundo e ESC)
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+        })();
+    </script>
 
 @endsection

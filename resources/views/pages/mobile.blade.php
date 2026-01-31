@@ -27,9 +27,12 @@
 
 @section('content')
 
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center">
-        <div class="container mx-auto px-6 flex flex-col items-center">
-            <i class="fas fa-mobile-alt mobile-hero-icon text-6xl"></i>
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden text-white py-24 md:py-40 text-center">
+        <div id="mobile" class="absolute inset-0 z-0"> 
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-700/55 via-blue-700/45 to-blue-800/35"></div>
+        </div>
+        <div class="container relative mx-auto px-4 flex flex-col items-center">
+            <!-- <i class="fas fa-mobile-alt mobile-hero-icon text-6xl"></i> -->
             <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">Desenvolvimento Mobile - A Sua App na Ponta dos Dedos</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Transforme a sua visão numa aplicação móvel intuitiva, performática e que alcança os seus clientes em qualquer lugar em Moçambique.
@@ -77,28 +80,42 @@
         <div class="container mx-auto px-4 flex flex-col items-center">
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-16 text-center">Nossas Abordagens e Metodologia em Desenvolvimento Mobile</h2>
             <div class="max-w-5xl mx-auto custom-bullet-list text-xl text-gray-700">
-                <li>
-                    <i class="fas fa-palette icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-pink-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-palette text-xl"></i>
+                    </div>
                     <p><strong>Design UX/UI Excecional:</strong> Acreditamos que a primeira impressão é crucial. Criamos interfaces visualmente deslumbrantes e experiências de usuário intuitivas e envolventes, que garantem alta usabilidade e satisfação do cliente.</p>
                 </li>
-                <li>
-                    <i class="fas fa-apple-alt icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-purple-600 text-white mr-4 shadow-sm">
+                        <i class="fa-brands fa-apple text-2xl"></i>
+                    </div>
                     <p><strong>Desenvolvimento Nativo iOS & Android:</strong> Construímos aplicações robustas e de alto desempenho para ambas as plataformas, iOS (Apple App Store) e Android (Google Play Store), aproveitando ao máximo as capacidades e a fluidez nativa de cada dispositivo.</p>
                 </li>
-                <li>
-                    <i class="fas fa-mobile-alt icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-mobile-alt text-xl"></i>
+                    </div>
                     <p><strong>Desenvolvimento Híbrido Otimizado:</strong> Para projetos com orçamentos e prazos mais ajustados, oferecemos soluções híbridas de alta qualidade. Com uma única base de código que funciona em múltiplas plataformas, garantimos eficiência sem comprometer a qualidade ou a experiência do utilizador.</p>
                 </li>
-                <li>
-                    <i class="fas fa-code-branch icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-orange-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-server text-xl"></i>
+                    </div>
+                    <!-- <i class="fas fa-code-branch icon"></i> -->
                     <p><strong>Integração de Backend Robusto:</strong> Desenvolvemos e integramos APIs seguras e eficientes para garantir que a sua aplicação se comunica perfeitamente com bases de dados e sistemas externos, proporcionando uma funcionalidade completa e escalável.</p>
                 </li>
-                <li>
-                    <i class="fas fa-vial icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-rose-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-vial-circle-check text-xl"></i>
+                    </div>
+                    <!-- <i class="fas fa-vial icon"></i> -->
                     <p><strong>Testes Rigorosos e Otimização Contínua:</strong> A qualidade é a nossa prioridade. Realizamos testes exaustivos (funcionais, de performance, de segurança e de usabilidade) para garantir que a sua app é impecável antes do lançamento, e continuamos a otimizar após a publicação.</p>
                 </li>
-                <li>
-                    <i class="fas fa-cloud-upload-alt icon"></i>
+                <li class="flex items-start">
+                    <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-teal-500 text-white mr-4 shadow-sm">
+                        <i class="fa-solid fa-cloud-upload-alt text-xl"></i>
+                    </div>
                     <p><strong>Publicação e Suporte Simplificados:</strong> Oferecemos apoio completo no complexo processo de submissão para a App Store e Google Play. Além disso, garantimos manutenção e suporte pós-lançamento para que a sua app permaneça atualizada, segura e funcionando sem problemas.</p>
                 </li>
             </div>

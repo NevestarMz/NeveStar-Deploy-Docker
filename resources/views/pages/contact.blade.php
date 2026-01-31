@@ -28,9 +28,12 @@
 
 @section('content')
 
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 md:py-40 text-center">
-        <div class="container mx-auto px-6 flex flex-col items-center">
-            <i class="fas fa-headset contact-hero-icon text-6xl"></i> {{-- Ícone representativo para 'Contacto' --}}
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden text-white py-24 md:py-40 text-center">
+        <div id="contact" class="absolute inset-0 z-0"> 
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-700/85 via-blue-700/75 to-blue-800/65"></div>
+        </div>
+        <div class="container relative mx-auto px-4 flex flex-col items-center">
+            <!-- <i class="fas fa-headset contact-hero-icon text-6xl"></i> {{-- Ícone representativo para 'Contacto' --}} -->
             <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">Fale Connosco - A NeveStar Está Pronta para Ouvir Você</h1>
             <p class="text-lg md:text-2xl max-w-4xl mx-auto mb-10 opacity-90">
                 Tem dúvidas, precisa de um orçamento ou quer começar um novo projeto? A nossa equipa está à disposição para ajudar.
@@ -52,14 +55,14 @@
                     <div class="card p-8 text-center flex flex-col items-center">
                         <i class="fas fa-envelope text-blue-600 text-5xl mb-4"></i>
                         <h3 class="text-2xl font-semibold text-gray-900 mb-3">Email</h3>
-                        <p class="text-gray-700 mb-4">Envie-nos um email a qualquer momento e responderemos o mais breve possível.</p>
+                        <p class="text-gray-700 mb-4">Envie-nos um email para suporte técnico, parcerias ou dúvidas gerais. A nossa equipa analisará cada mensagem detalhadamente e responderemos com a máxima brevidade possível.</p>
                         <!-- <a href="mailto:contacto@nevestar.co.mz" class="text-blue-600 hover:underline font-medium text-lg">contacto@nevestar.co.mz</a> -->
                         <a href="mailto:contacto@nevestar.co.mz" class="text-blue-600 hover:underline font-medium text-lg">nevestar@nevestar.co.mz</a>
                     </div>
                     <div class="card p-8 text-center flex flex-col items-center">
                         <i class="fas fa-phone-alt text-blue-600 text-5xl mb-4"></i>
                         <h3 class="text-2xl font-semibold text-gray-900 mb-3">Telefone & WhatsApp</h3>
-                        <p class="text-gray-700 mb-4">Fale diretamente com a nossa equipa para um atendimento rápido.</p>
+                        <p class="text-gray-700 mb-4">Fale com a nossa equipa para um atendimento rápido e personalizado. Estamos disponíveis para chamadas e mensagens de segunda a sexta-feira, das 08:00h às 17:00h.</p>
                         <a href="tel:+258850492263" class="text-blue-600 hover:underline font-medium text-lg mb-2">+258 85 049 2263</a>
                         <a href="https://wa.me/258850492263" target="_blank" class="text-green-500 hover:underline font-medium text-lg flex items-center">
                             <i class="fab fa-whatsapp mr-2"></i> Enviar WhatsApp
@@ -68,7 +71,7 @@
                     <div class="card p-8 text-center flex flex-col items-center">
                         <i class="fas fa-map-marker-alt text-blue-600 text-5xl mb-4"></i>
                         <h3 class="text-2xl font-semibold text-gray-900 mb-3">Localização</h3>
-                        <p class="text-gray-700 mb-4">Visite-nos em nosso escritório principal em Agostinho Neto - Maxixe, Moçambique.</p>
+                        <p class="text-gray-700 mb-4">Visite-nos em nosso escritório principal em Benfica, Bairro Jorge Dimitrov  - KaMubukwana, Maputo.</p>
                         <address class="not-italic text-gray-700 mb-2">
                             Av. 4 de outubro, Rua Teodoro Gonçalves de Silva, <br>
                             Benfica - Maputo, Moçambique
